@@ -1,6 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./styles/index.css"
+import "normalize.css"
+import "./styles/fonts.css"
+import "./styles/base.css"
+import "./styles/helpers.css"
+import "./styles/variables.css"
 import App from "./components/app"
 import * as serviceWorker from "./serviceWorker"
 

@@ -1,0 +1,14 @@
+.instructor {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 70vh;
+  width: auto;
+}
+
+.speechbubble {
+  position: absolute;
+  left: 400px;
+  top: 50px;
+  max-width: 600px;
+}

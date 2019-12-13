@@ -1,0 +1,14 @@
+.component {
+  display: flex;
+}
+
+.targetAudience {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.stats {
+  flex: 0 1 auto;
+  min-width: 300px;
+  margin: 2rem;
+}

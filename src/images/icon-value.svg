@@ -1,0 +1,10 @@
+<svg id="icon-value" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.151" height="21.956" viewBox="0 0 24.151 21.956">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Pfad_301" data-name="Pfad 301" d="M0,0H24.151V-21.956H0Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Gruppe_312" data-name="Gruppe 312" transform="translate(0 21.956)" clip-path="url(#clip-path)">
+    <path id="Pfad_300" data-name="Pfad 300" d="M12.076-16.965a6.245,6.245,0,0,1,9.327-2c2.332,2,2.332,5.987,0,9.978C19.77-5.989,15.573-3,12.076-1c-3.5-2-7.695-4.989-9.327-7.982-2.332-3.991-2.332-7.982,0-9.978A6.245,6.245,0,0,1,12.076-16.965Z" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+  </g>
+</svg>

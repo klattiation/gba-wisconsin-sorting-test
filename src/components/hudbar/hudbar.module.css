@@ -1,0 +1,7 @@
+.component {
+  background: var(--colorDarkBlue);
+  color: var(--colorWhite);
+  height: 230px;
+  position: relative;
+  width: 100%;
+}

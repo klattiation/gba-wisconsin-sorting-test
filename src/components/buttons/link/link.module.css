@@ -1,0 +1,10 @@
+@import "../../../styles/variables.css";
+
+.link {
+  color: var(--colorDarkBlue);
+  text-decoration: none;
+}
+
+.btnPrimary {
+  composes: btnPrimary from "../button/button.module.css";
+}

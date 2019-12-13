@@ -1,0 +1,8 @@
+.component {
+  background: var(--colorPetrol);
+  border-radius: 10px;
+  color: var(--colorWhite);
+  display: inline-block;
+  padding: 16px;
+  text-align: left;
+}

@@ -1,0 +1,33 @@
+.btnBase {
+  border-radius: 6px;
+  color: var(--colorDarkBlue);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--fontRegular);
+  margin: 1rem 0;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
+  user-select: none;
+  outline: none;
+}
+.btnBase:hover {
+  transform: scale(1.1);
+}
+.btnBase:focus {
+  transform: scale(1.1);
+}
+.btnBase:active {
+  transform: scale(0.95);
+}
+.btnBase:disabled,
+.btnBase[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btnPrimary {
+  composes: btnBase;
+  border: 2px solid var(--colorWhite);
+  background: var(--colorWhite);
+}

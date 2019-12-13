@@ -1,0 +1,7 @@
+.component {
+  background: var(--colorDarkBlue);
+  color: var(--colorWhite);
+  width: 450px;
+  height: 280px;
+  border: 6px solid var(--colorGrey);
+}
