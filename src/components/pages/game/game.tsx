@@ -5,19 +5,16 @@ import styles from "./game.module.css"
 import GameStage from "../../game-stage"
 import Card from "../../card"
 import { CARDS } from "../../../state/game/game.state"
+import { ResolvedCard } from "../../../state/game/game.props"
 
 const Game: FC<RouteComponentProps> = () => {
-  const [index, setIndex] = useState(0)
+  const [index] = useState(0)
   const card = CARDS.get(index)
   return (
     <div className={styles.component}>
       <GameStage className={styles.stage}>Stage</GameStage>
       <Hudbar className={styles.hudbar}>
-        {card ? (
-          <Card className={styles.card} data={card} />
-        ) : (
-          "Es ist keine Karte mehr übrig."
-        )}
+        {card && <Card className={styles.card} data={card as ResolvedCard} />}
       </Hudbar>
     </div>
   )

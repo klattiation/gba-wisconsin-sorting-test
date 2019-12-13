@@ -3,24 +3,34 @@ import cn from "classnames"
 import TargetAvatar from "../avatars/target"
 import styles from "./game-stage.module.css"
 import Blackboard from "../blackboard"
+import { AUDIENCE } from "../../state/game/game.state"
 
 interface GameStageProps {
   className: string
 }
 
-const GameStage: FC<GameStageProps> = ({ className }) => (
-  <div className={cn(styles.component, className)}>
-    <div className={styles.targetAudience}>
-      <TargetAvatar imageUrl={"images/avatar-0.png"} />
-      <TargetAvatar imageUrl={"images/avatar-1.png"} />
-      <TargetAvatar imageUrl={"images/avatar-2.png"} />
-      <TargetAvatar imageUrl={"images/avatar-3.png"} />
-      <TargetAvatar imageUrl={"images/avatar-4.png"} />
+const GameStage: FC<GameStageProps> = ({ className }) => {
+  const audience = useAudience()
+  return (
+    <div className={cn(styles.component, className)}>
+      <div className={styles.targetAudience}>
+        {audience.map((entry, idx) => (
+          <TargetAvatar
+            key={idx}
+            imageUrl={`images/avatar-${idx}.png`}
+            data={entry}
+          />
+        ))}
+      </div>
+      <div className={styles.stats}>
+        <Blackboard />
+      </div>
     </div>
-    <div className={styles.stats}>
-      <Blackboard />
-    </div>
-  </div>
-)
+  )
+}
+
+const useAudience = () => {
+  return AUDIENCE
+}
 
 export default GameStage

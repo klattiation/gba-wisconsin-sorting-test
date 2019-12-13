@@ -11,20 +11,26 @@ export interface CriteriaValue {
   label: string
 }
 
-export interface CardConfig {
+export interface CriteriaAssignment {
   category: string
   channel: string
   design: string
   price: string
   value: string
+}
+
+export interface CardConfig extends CriteriaAssignment {
   image: string
 }
 
-export interface ResolvedCard {
+export interface ResolvedCriteriaAssignment {
   category: CriteriaValue
   channel: CriteriaValue
   design: CriteriaValue
   price: CriteriaValue
   value: CriteriaValue
+}
+
+export interface ResolvedCard extends ResolvedCriteriaAssignment {
   image: string
 }

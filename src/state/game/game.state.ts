@@ -3,7 +3,8 @@ import {
   CriteriaValue,
   CriteriaName,
   CardConfig,
-  ResolvedCard,
+  ResolvedCriteriaAssignment,
+  CriteriaAssignment,
 } from "./game.props"
 
 const CATEGORIES: Record<string, CriteriaValue> = {
@@ -133,7 +134,7 @@ const CARD_CONFIGS: CardConfig[] = [
   {
     [CriteriaName.Channel]: "print",
     [CriteriaName.Category]: "adventure",
-    [CriteriaName.Price]: "leisure",
+    [CriteriaName.Price]: "installments",
     [CriteriaName.Design]: "modern",
     [CriteriaName.Value]: "quality",
     image: "benzinroller",
@@ -636,16 +637,71 @@ const CARD_CONFIGS: CardConfig[] = [
   },
 ]
 
-const resolveCards = (cards: CardConfig[]) =>
-  List<ResolvedCard>(
+const AUDIENCE_CONFIGS: CriteriaAssignment[] = [
+  {
+    [CriteriaName.Channel]: "social",
+    [CriteriaName.Category]: "trend",
+    [CriteriaName.Price]: "discount",
+    [CriteriaName.Design]: "modern",
+    [CriteriaName.Value]: "image",
+  },
+  {
+    [CriteriaName.Channel]: "print",
+    [CriteriaName.Category]: "leisure",
+    [CriteriaName.Price]: "sale",
+    [CriteriaName.Design]: "minimal",
+    [CriteriaName.Value]: "health",
+  },
+  {
+    [CriteriaName.Channel]: "tele",
+    [CriteriaName.Category]: "routine",
+    [CriteriaName.Price]: "installments",
+    [CriteriaName.Design]: "classic",
+    [CriteriaName.Value]: "sustainability",
+  },
+  {
+    [CriteriaName.Channel]: "tv",
+    [CriteriaName.Category]: "luxury",
+    [CriteriaName.Price]: "advanced",
+    [CriteriaName.Design]: "extravagant",
+    [CriteriaName.Value]: "quality",
+  },
+  {
+    [CriteriaName.Channel]: "outdoor",
+    [CriteriaName.Category]: "adventure",
+    [CriteriaName.Price]: "regular",
+    [CriteriaName.Design]: "innovative",
+    [CriteriaName.Value]: "fairness",
+  },
+]
+
+const makeResolver = (haystack: Record<string, any>) => (id: string) => {
+  const cat = haystack[id]
+  if (!cat) {
+    debugger
+    throw Error(`Could not resolve id: "${id}"`)
+  }
+  return cat
+}
+
+const resolveIds = (cards: CriteriaAssignment[]) => {
+  const category = makeResolver(CATEGORIES)
+  const channel = makeResolver(CHANNELS)
+  const design = makeResolver(DESIGNS)
+  const price = makeResolver(PRICES)
+  const value = makeResolver(VALUES)
+  return List<ResolvedCriteriaAssignment>(
     cards.map(card => ({
-      category: CATEGORIES[card.category],
-      channel: CHANNELS[card.channel],
-      design: DESIGNS[card.design],
-      price: PRICES[card.price],
-      value: VALUES[card.value],
-      image: card.image,
+      ...card,
+      category: category(card.category),
+      channel: channel(card.channel),
+      design: design(card.design),
+      price: price(card.price),
+      value: value(card.value),
     }))
   )
+}
 
-export const CARDS = resolveCards(CARD_CONFIGS)
+export const AUDIENCE = resolveIds(AUDIENCE_CONFIGS)
+
+export const CARDS = resolveIds(CARD_CONFIGS)
