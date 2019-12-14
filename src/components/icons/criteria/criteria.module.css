@@ -2,3 +2,13 @@
   width: 24px;
   height: 24px;
 }
+
+.light path {
+  fill: var(--colorWhite);
+  stroke: var(--colorWhite);
+}
+
+.dark path {
+  fill: var(--colorPetrol);
+  stroke: var(--colorPetrol);
+}

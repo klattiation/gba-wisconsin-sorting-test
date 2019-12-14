@@ -1,4 +1,5 @@
 import React, { FC, SVGProps } from "react"
+import cn from "classnames"
 import { CriteriaName } from "../../../state/game/game.props"
 import { ReactComponent as IconCategory } from "../../../images/icon-category.svg"
 import { ReactComponent as IconChannel } from "../../../images/icon-channel.svg"
@@ -17,11 +18,16 @@ const icons: Record<CriteriaName, FC<SVGProps<SVGSVGElement>>> = {
 
 interface CriteriaIconProps {
   criteria: CriteriaName
+  light?: boolean
 }
 
-const CriteriaIcon: FC<CriteriaIconProps> = ({ criteria }) => {
+const CriteriaIcon: FC<CriteriaIconProps> = ({ criteria, light }) => {
   const Icon = icons[criteria]
-  return <Icon className={styles.component} />
+  return (
+    <Icon
+      className={cn(styles.component, light ? styles.light : styles.dark)}
+    />
+  )
 }
 
 export default CriteriaIcon

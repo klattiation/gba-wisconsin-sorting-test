@@ -1,3 +1,6 @@
+import { DragObjectWithType } from "react-dnd"
+import { ActionCreator, AnyAction } from "redux"
+
 export enum CriteriaName {
   Category = "category",
   Design = "design",
@@ -33,4 +36,25 @@ export interface ResolvedCriteriaAssignment {
 
 export interface ResolvedCard extends ResolvedCriteriaAssignment {
   image: string
+}
+
+export interface GameState {
+  cardIndex: number
+  criteriaIndex: number
+  combo: number
+  score: number
+}
+
+export interface PlayCardPayload {
+  avatarData: ResolvedCriteriaAssignment
+  cardData: ResolvedCriteriaAssignment
+  criteria: CriteriaName
+}
+
+export type PlayCardActionCreator = ActionCreator<
+  AnyAction & { payload: PlayCardPayload }
+>
+
+export interface CardDragItem extends DragObjectWithType {
+  data: ResolvedCard
 }

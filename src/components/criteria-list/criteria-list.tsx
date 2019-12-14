@@ -10,28 +10,42 @@ import {
 interface CriteriaListProps {
   className?: string
   data: ResolvedCriteriaAssignment
+  filled?: boolean
+  noTopRadius?: boolean
 }
 
-const CriteriaList: FC<CriteriaListProps> = ({ className, data }) => (
-  <ul className={cn(styles.component, className)}>
+const CriteriaList: FC<CriteriaListProps> = ({
+  className,
+  data,
+  filled,
+  noTopRadius,
+}) => (
+  <ul
+    className={cn(
+      styles.component,
+      filled ? styles.filled : styles.light,
+      noTopRadius && styles.noTopRadius,
+      className
+    )}
+  >
     <li className={styles.criterion}>
-      <CriteriaIcon criteria={CriteriaName.Category} />
+      <CriteriaIcon light={filled} criteria={CriteriaName.Category} />
       <span className={styles.criterionLabel}>{data.category.label}</span>
     </li>
     <li className={styles.criterion}>
-      <CriteriaIcon criteria={CriteriaName.Channel} />
+      <CriteriaIcon light={filled} criteria={CriteriaName.Channel} />
       <span className={styles.criterionLabel}>{data.channel.label}</span>
     </li>
     <li className={styles.criterion}>
-      <CriteriaIcon criteria={CriteriaName.Design} />
+      <CriteriaIcon light={filled} criteria={CriteriaName.Design} />
       <span className={styles.criterionLabel}>{data.design.label}</span>
     </li>
     <li className={styles.criterion}>
-      <CriteriaIcon criteria={CriteriaName.Price} />
+      <CriteriaIcon light={filled} criteria={CriteriaName.Price} />
       <span className={styles.criterionLabel}>{data.price.label}</span>
     </li>
     <li className={styles.criterion}>
-      <CriteriaIcon criteria={CriteriaName.Value} />
+      <CriteriaIcon light={filled} criteria={CriteriaName.Value} />
       <span className={styles.criterionLabel}>{data.value.label}</span>
     </li>
   </ul>

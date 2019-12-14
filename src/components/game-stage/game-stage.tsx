@@ -17,6 +17,7 @@ const GameStage: FC<GameStageProps> = ({ className }) => {
         {audience.map((entry, idx) => (
           <TargetAvatar
             key={idx}
+            idx={idx}
             imageUrl={`images/avatar-${idx}.png`}
             data={entry}
           />

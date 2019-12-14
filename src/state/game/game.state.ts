@@ -5,6 +5,8 @@ import {
   CardConfig,
   ResolvedCriteriaAssignment,
   CriteriaAssignment,
+  GameState,
+  ResolvedCard,
 } from "./game.props"
 
 const CATEGORIES: Record<string, CriteriaValue> = {
@@ -675,6 +677,16 @@ const AUDIENCE_CONFIGS: CriteriaAssignment[] = [
   },
 ]
 
+export const CRITERIA_ORDER = List([
+  CriteriaName.Category,
+  CriteriaName.Value,
+  CriteriaName.Price,
+  CriteriaName.Channel,
+  CriteriaName.Design,
+  CriteriaName.Value,
+  CriteriaName.Price,
+])
+
 const makeResolver = (haystack: Record<string, any>) => (id: string) => {
   const cat = haystack[id]
   if (!cat) {
@@ -704,4 +716,11 @@ const resolveIds = (cards: CriteriaAssignment[]) => {
 
 export const AUDIENCE = resolveIds(AUDIENCE_CONFIGS)
 
-export const CARDS = resolveIds(CARD_CONFIGS)
+export const CARDS = resolveIds(CARD_CONFIGS) as List<ResolvedCard>
+
+export const initialState: GameState = Object.freeze({
+  cardIndex: 0,
+  criteriaIndex: 0,
+  combo: 0,
+  score: 10000,
+})
