@@ -1,11 +1,13 @@
 .component {
   cursor: grab;
   width: 290px;
-  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
   user-select: none;
+  border-radius: 24px;
 }
 
 .image {
+  border-radius: 24px;
   background: var(--colorWhite);
   color: var(--colorDarkBlue);
   height: 150px;

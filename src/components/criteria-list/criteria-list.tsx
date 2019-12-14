@@ -24,7 +24,7 @@ const CriteriaList: FC<CriteriaListProps> = ({ className, data }) => (
     </li>
     <li className={styles.criterion}>
       <CriteriaIcon criteria={CriteriaName.Design} />
-      <span className={styles.criterionLabel}>{data.channel.label}</span>
+      <span className={styles.criterionLabel}>{data.design.label}</span>
     </li>
     <li className={styles.criterion}>
       <CriteriaIcon criteria={CriteriaName.Price} />
