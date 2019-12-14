@@ -28,13 +28,13 @@ const playCard = (state: GameState, payload: PlayCardPayload): GameState => {
   ]
   const isCriteriaChange = newCombo >= 7
   const criteriaIndex = isCriteriaChange
-    ? state.criteriaIndex + 1
-    : state.criteriaIndex
+    ? state.criteriaTrumpIndex + 1
+    : state.criteriaTrumpIndex
   return {
     ...state,
     cardIndex,
     combo: isCriteriaChange ? 0 : newCombo,
-    criteriaIndex,
+    criteriaTrumpIndex: criteriaIndex,
     scores,
   }
 }

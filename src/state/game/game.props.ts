@@ -40,7 +40,8 @@ export interface ResolvedCard extends ResolvedCriteriaAssignment {
 
 export interface GameState {
   cardIndex: number
-  criteriaIndex: number
+  criteriaTrumpIndex: number
+  criteriaOrderIndex: number
   combo: number
   scores: number[]
 }

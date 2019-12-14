@@ -5,6 +5,8 @@ import styles from "./card.module.css"
 import { ResolvedCard } from "../../state/game/game.props"
 import CriteriaList from "../criteria-list"
 import { DragItem } from "../../constants/drag-items"
+import { getCriteriaOrder } from "../../state/game/game.selectors"
+import { useSelector } from "react-redux"
 
 interface CardProps {
   className?: string
@@ -21,13 +23,15 @@ const Card: FC<CardProps> = ({ data, className }) => {
       isDragging: !!monitor.isDragging(),
     }),
   })
+  const order = useSelector(getCriteriaOrder)
+
   return (
     <div
       className={cn(styles.component, isDragging && styles.dragging, className)}
       ref={ref}
     >
       <div className={styles.image}>{data.image}</div>
-      <CriteriaList data={data} filled noTopRadius />
+      <CriteriaList data={data} order={order} filled noTopRadius />
     </div>
   )
 }

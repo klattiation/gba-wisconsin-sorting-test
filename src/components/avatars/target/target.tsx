@@ -9,7 +9,8 @@ import { useDrop } from "react-dnd"
 import { DragItem } from "../../../constants/drag-items"
 import { useDispatch, useSelector } from "react-redux"
 import { playCard } from "../../../state/game/game.actions"
-import { getCriteria } from "../../../state/game/game.selectors"
+import { getTrumpCriteria } from "../../../state/game/game.selectors"
+import { DEFAULT_CRITERIA_ORDER } from "../../../state/game/game.state"
 
 interface TargetAvatarProps {
   idx: number
@@ -19,7 +20,7 @@ interface TargetAvatarProps {
 
 const TargetAvatar: FC<TargetAvatarProps> = ({ idx, data, imageUrl }) => {
   const dispatch = useDispatch()
-  const criteria = useSelector(getCriteria)
+  const criteria = useSelector(getTrumpCriteria)
   const [{ isOver }, ref] = useDrop({
     accept: DragItem.Card,
     drop: (card: CardDragItem) => {
@@ -32,7 +33,11 @@ const TargetAvatar: FC<TargetAvatarProps> = ({ idx, data, imageUrl }) => {
 
   return (
     <div ref={ref} className={styles.component}>
-      <CriteriaList data={data} filled={isOver} />
+      <CriteriaList
+        data={data}
+        filled={isOver}
+        order={DEFAULT_CRITERIA_ORDER}
+      />
       <img src={imageUrl} alt={"Hier steht ein Avatar"} />
     </div>
   )

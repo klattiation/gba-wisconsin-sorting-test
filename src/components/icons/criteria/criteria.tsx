@@ -17,12 +17,12 @@ const icons: Record<CriteriaName, FC<SVGProps<SVGSVGElement>>> = {
 }
 
 interface CriteriaIconProps {
-  criteria: CriteriaName
+  criterion: CriteriaName
   light?: boolean
 }
 
-const CriteriaIcon: FC<CriteriaIconProps> = ({ criteria, light }) => {
-  const Icon = icons[criteria]
+const CriteriaIcon: FC<CriteriaIconProps> = ({ criterion, light }) => {
+  const Icon = icons[criterion]
   return (
     <Icon
       className={cn(styles.component, light ? styles.light : styles.dark)}

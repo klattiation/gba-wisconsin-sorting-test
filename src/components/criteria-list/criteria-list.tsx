@@ -12,6 +12,7 @@ interface CriteriaListProps {
   data: ResolvedCriteriaAssignment
   filled?: boolean
   noTopRadius?: boolean
+  order: CriteriaName[]
 }
 
 const CriteriaList: FC<CriteriaListProps> = ({
@@ -19,6 +20,7 @@ const CriteriaList: FC<CriteriaListProps> = ({
   data,
   filled,
   noTopRadius,
+  order,
 }) => (
   <ul
     className={cn(
@@ -28,26 +30,12 @@ const CriteriaList: FC<CriteriaListProps> = ({
       className
     )}
   >
-    <li className={styles.criterion}>
-      <CriteriaIcon light={filled} criteria={CriteriaName.Category} />
-      <span className={styles.criterionLabel}>{data.category.label}</span>
-    </li>
-    <li className={styles.criterion}>
-      <CriteriaIcon light={filled} criteria={CriteriaName.Channel} />
-      <span className={styles.criterionLabel}>{data.channel.label}</span>
-    </li>
-    <li className={styles.criterion}>
-      <CriteriaIcon light={filled} criteria={CriteriaName.Design} />
-      <span className={styles.criterionLabel}>{data.design.label}</span>
-    </li>
-    <li className={styles.criterion}>
-      <CriteriaIcon light={filled} criteria={CriteriaName.Price} />
-      <span className={styles.criterionLabel}>{data.price.label}</span>
-    </li>
-    <li className={styles.criterion}>
-      <CriteriaIcon light={filled} criteria={CriteriaName.Value} />
-      <span className={styles.criterionLabel}>{data.value.label}</span>
-    </li>
+    {order.map(criterion => (
+      <li key={data[criterion].label} className={styles.criterion}>
+        <CriteriaIcon light={filled} criterion={criterion} />
+        <span className={styles.criterionLabel}>{data[criterion].label}</span>
+      </li>
+    ))}
   </ul>
 )
 
