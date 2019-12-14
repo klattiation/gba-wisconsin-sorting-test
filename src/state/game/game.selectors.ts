@@ -1,24 +1,18 @@
 import { GlobalState as GS } from "../createStore"
 import { createSelector } from "reselect"
-import { ResolvedCard, GameState, CriteriaName } from "./game.props"
+import { ResolvedCard, CriteriaName } from "./game.props"
 import { CARDS, CRITERIA_ORDER } from "./game.state"
 
-const getBase = (state: GS) => state.game
+const getCardIndex = (state: GS) => state.game.cardIndex
 
-const getCardIndex = createSelector<GS, GameState, number>(
-  getBase,
-  game => game.cardIndex
-)
+const getCriteriaIndex = (state: GS) => state.game.criteriaIndex
 
-// const getCombo = createSelector<GS, GameState, number>(
-//   getBase,
-//   game => game.combo
-// )
+export const getScore = (state: GS) => state.game.score
 
-export const getCriteria = createSelector<GS, GameState, CriteriaName>(
-  getBase,
-  game =>
-    CRITERIA_ORDER.get(game.criteriaIndex % CRITERIA_ORDER.size) as CriteriaName
+export const getCriteria = createSelector<GS, number, CriteriaName>(
+  getCriteriaIndex,
+  criteriaIndex =>
+    CRITERIA_ORDER.get(criteriaIndex % CRITERIA_ORDER.size) as CriteriaName
 )
 
 export const getCurrentCard = createSelector<

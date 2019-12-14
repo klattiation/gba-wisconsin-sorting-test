@@ -1,7 +1,37 @@
 .component {
   background: var(--colorDarkBlue);
   color: var(--colorWhite);
-  height: 230px;
-  position: relative;
+  height: 200px;
+  display: flex;
   width: 100%;
+}
+
+.card {
+  position: relative;
+  flex: 0 1 auto;
+  width: 33.3333%;
+}
+
+.card > *:first-child {
+  position: absolute;
+  bottom: 24px;
+  right: 7rem;
+}
+
+.task {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.task > span:first-child {
+  color: var(--colorGrey);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.task > span:last-child {
+  font-size: 36px;
 }
