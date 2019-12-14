@@ -722,5 +722,5 @@ export const initialState: GameState = Object.freeze({
   cardIndex: 0,
   criteriaIndex: 0,
   combo: 0,
-  score: 10000,
+  scores: [10000],
 })

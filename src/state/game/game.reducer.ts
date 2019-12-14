@@ -1,4 +1,5 @@
 import { Reducer, AnyAction } from "redux"
+import last from "lodash/last"
 import { GameState, PlayCardPayload } from "./game.props"
 import { initialState } from "./game.state"
 import { PLAY_CARD } from "./game.actions"
@@ -20,7 +21,11 @@ const playCard = (state: GameState, payload: PlayCardPayload): GameState => {
   const isCorrect = avatarData[criteria].id === cardData[criteria].id
   const cardIndex = state.cardIndex + 1
   const newCombo = isCorrect ? state.combo + 1 : 0
-  const score = isCorrect ? state.score + SCORE_WIN : state.score + SCORE_LOSE
+  const lastScore = last(state.scores) || 0
+  const scores = [
+    ...state.scores,
+    isCorrect ? lastScore + SCORE_WIN : lastScore + SCORE_LOSE,
+  ]
   const isCriteriaChange = newCombo >= 7
   const criteriaIndex = isCriteriaChange
     ? state.criteriaIndex + 1
@@ -30,7 +35,7 @@ const playCard = (state: GameState, payload: PlayCardPayload): GameState => {
     cardIndex,
     combo: isCriteriaChange ? 0 : newCombo,
     criteriaIndex,
-    score,
+    scores,
   }
 }
 

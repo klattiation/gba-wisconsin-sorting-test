@@ -53,3 +53,7 @@ code {
 address {
   font-style: normal;
 }
+
+figure {
+  margin: 0;
+}

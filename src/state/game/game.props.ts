@@ -42,7 +42,7 @@ export interface GameState {
   cardIndex: number
   criteriaIndex: number
   combo: number
-  score: number
+  scores: number[]
 }
 
 export interface PlayCardPayload {
