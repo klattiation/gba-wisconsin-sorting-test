@@ -6,6 +6,7 @@ import {
 
 const BASE = "GAME"
 export const PLAY_CARD = `${BASE}.PLAY_CARD`
+export const RESET = `${BASE}.RESET`
 
 export const playCard: PlayCardActionCreator = (
   avatarData: ResolvedCriteriaAssignment,
@@ -18,4 +19,8 @@ export const playCard: PlayCardActionCreator = (
     cardData,
     criteria,
   },
+})
+
+export const reset = () => ({
+  type: RESET,
 })

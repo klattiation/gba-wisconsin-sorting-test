@@ -32,6 +32,6 @@
   margin-bottom: 8px;
 }
 
-.task > span:last-child {
+.task > span:nth-child(2) {
   font-size: 36px;
 }

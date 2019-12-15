@@ -2,12 +2,14 @@ import { Reducer, AnyAction } from "redux"
 import last from "lodash/last"
 import { GameState, PlayCardPayload } from "./game.props"
 import { initialState } from "./game.state"
-import { PLAY_CARD } from "./game.actions"
+import { PLAY_CARD, RESET } from "./game.actions"
 
 const game: Reducer<GameState, AnyAction> = (state = initialState, action) => {
   switch (action.type) {
     case PLAY_CARD:
       return playCard(state, action.payload)
+    case RESET:
+      return initialState
     default:
       return state
   }

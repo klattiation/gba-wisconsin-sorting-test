@@ -5,6 +5,7 @@ import { Route } from "../../../constants/routes"
 
 interface LinkProps {
   appearance?: LinkAppearance
+  onClick?: (evt: any) => void
   to: Route
 }
 

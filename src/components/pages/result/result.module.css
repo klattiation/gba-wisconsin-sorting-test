@@ -1,0 +1,14 @@
+.component {
+  display: flex;
+  align-items: center;
+}
+
+.instructor {
+  width: 40%;
+  height: 100vh;
+  overflow: hidden;
+  margin-right: 3rem;
+}
+.instructor svg {
+  transform: translateY(20%);
+}

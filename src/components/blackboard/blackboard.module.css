@@ -10,6 +10,12 @@
   padding: 1rem;
 }
 
+.big {
+  width: 700px;
+  height: 435px;
+  border-width: 12px;
+}
+
 .chart {
   flex: 1 0 auto;
   width: 100%;
