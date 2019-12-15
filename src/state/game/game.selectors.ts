@@ -12,7 +12,7 @@ export const getScore = (state: GS) => last(state.game.scores) || 0
 
 export const getScoreHistory = (state: GS) => state.game.scores
 
-export const getTrumpCriteria = createSelector<GS, number, CriteriaName>(
+export const getTrumpCriteria = createSelector(
   getCriteriaIndex,
   criteriaIndex =>
     CRITERIA_TRUMP_ORDER.get(
@@ -20,19 +20,21 @@ export const getTrumpCriteria = createSelector<GS, number, CriteriaName>(
     ) as CriteriaName
 )
 
-export const getCriteriaOrder = createSelector<GS, number, CriteriaName[]>(
-  getCardIndex,
-  cardIndex => {
-    const entry = CRITERIA_CARD_ORDERS.find(v => cardIndex < v.threshold)
-    if (!entry) {
-      throw Error(`Could not find criteria order for cardIndex: ${cardIndex}`)
-    }
-    return entry.order
+export const getCriteriaOrder = createSelector(getCardIndex, cardIndex => {
+  const entry = CRITERIA_CARD_ORDERS.find(v => cardIndex < v.threshold)
+  if (!entry) {
+    throw Error(`Could not find criteria order for cardIndex: ${cardIndex}`)
   }
-)
+  return entry.order
+})
 
 export const getCurrentCard = createSelector<
   GS,
   number,
   ResolvedCard | undefined
 >(getCardIndex, cardIndex => CARDS.get(cardIndex))
+
+export const getIsGameComplete = createSelector(
+  getCardIndex,
+  index => index >= CARDS.size
+)
