@@ -1,11 +1,12 @@
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
+import { useDrop } from "react-dnd"
+import noop from "lodash/noop"
 import styles from "./target.module.css"
 import CriteriaList from "../../criteria-list"
 import {
   ResolvedCriteriaAssignment,
   CardDragItem,
 } from "../../../state/game/game.props"
-import { useDrop } from "react-dnd"
 import { DragItem } from "../../../constants/drag-items"
 import { useDispatch, useSelector } from "react-redux"
 import { playCard } from "../../../state/game/game.actions"
@@ -16,15 +17,26 @@ interface TargetAvatarProps {
   idx: number
   data: ResolvedCriteriaAssignment
   imageUrl: string
+  onCorrectDrop?: () => void
 }
 
-const TargetAvatar: FC<TargetAvatarProps> = ({ idx, data, imageUrl }) => {
+const TargetAvatar: FC<TargetAvatarProps> = ({
+  idx,
+  data,
+  imageUrl,
+  onCorrectDrop = noop,
+}) => {
   const dispatch = useDispatch()
   const criteria = useSelector(getTrumpCriteria)
+  const [isHovering, setIsHovering] = useState(false)
   const [{ isOver }, ref] = useDrop({
     accept: DragItem.Card,
     drop: (card: CardDragItem) => {
       dispatch(playCard(data, card.data, criteria))
+      const isCorrect = card.data[criteria].id === data[criteria].id
+      if (isCorrect) {
+        onCorrectDrop()
+      }
     },
     collect: mon => ({
       isOver: !!mon.isOver(),
@@ -32,13 +44,24 @@ const TargetAvatar: FC<TargetAvatarProps> = ({ idx, data, imageUrl }) => {
   })
 
   return (
-    <div ref={ref} className={styles.component}>
+    <div
+      ref={ref}
+      className={styles.component}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
       <CriteriaList
         data={data}
-        filled={isOver}
+        hidden={!isOver && !isHovering}
         order={DEFAULT_CRITERIA_ORDER}
+        withTransition
+        className={styles.list}
       />
-      <img src={imageUrl} alt={"Hier steht ein Avatar"} />
+      <img
+        src={imageUrl}
+        alt={"Hier steht ein Avatar"}
+        className={styles.avatar}
+      />
     </div>
   )
 }

@@ -2,3 +2,11 @@
   margin: 1rem;
   user-select: none;
 }
+
+.list {
+  position: relative;
+}
+
+.avatar {
+  position: relative;
+}

@@ -10,6 +10,10 @@
   flex-direction: column;
 }
 
+.withTransition {
+  transition: all 0.1s ease-in-out;
+}
+
 .noTopRadius {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -34,4 +38,9 @@
 .criterionLabel {
   flex: 1 0 auto;
   margin-left: 8px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(10%);
 }

@@ -11,21 +11,27 @@ interface CriteriaListProps {
   className?: string
   data: ResolvedCriteriaAssignment
   filled?: boolean
+  hidden?: boolean
   noTopRadius?: boolean
   order: CriteriaName[]
+  withTransition?: boolean
 }
 
 const CriteriaList: FC<CriteriaListProps> = ({
   className,
   data,
   filled,
+  hidden,
   noTopRadius,
   order,
+  withTransition,
 }) => (
   <ul
     className={cn(
       styles.component,
       filled ? styles.filled : styles.light,
+      hidden && styles.hidden,
+      withTransition && styles.withTransition,
       noTopRadius && styles.noTopRadius,
       className
     )}
