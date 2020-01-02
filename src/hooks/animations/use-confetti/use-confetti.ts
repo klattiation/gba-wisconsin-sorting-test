@@ -1,13 +1,13 @@
 import { useState, useLayoutEffect } from "react"
 import times from "lodash/times"
-import Vector2 from "../core/Vector2"
-import { randomRange } from "../utils/random"
-import Particle from "../core/Particle"
-import Animation from "../core/Animation"
+import Vector2 from "../../../physics/Vector2"
+import { randomRange } from "../../../utils/random"
+import Particle from "../../../physics/Particle"
+import Animation from "../../../physics/Animation"
 import { UseConfettiHook } from "./confetti.props"
-import { TWO_PI } from "../utils/constants"
-import { AnimationEventType } from "../core/props"
-import { isBrowser } from "../utils/misc"
+import { TWO_PI } from "../../../utils/constants"
+import { AnimationEventType } from "../../../physics/props"
+import { isBrowser } from "../../../utils/misc"
 
 const { AnimationComplete } = AnimationEventType
 

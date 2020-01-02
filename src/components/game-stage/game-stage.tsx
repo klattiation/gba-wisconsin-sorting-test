@@ -4,9 +4,9 @@ import TargetAvatar from "../avatars/target"
 import styles from "./game-stage.module.css"
 import Blackboard from "../blackboard"
 import { AUDIENCE } from "../../state/game/game.state"
-import useConfetti from "../../animations/confetti"
-import Vector2 from "../../animations/core/Vector2"
-import useErrorFlash from "../../animations/error-flash"
+import useConfetti from "../../hooks/animations/use-confetti"
+import useErrorFlash from "../../hooks/animations/use-error-flash"
+import Vector2 from "../../physics/Vector2"
 
 interface GameStageProps {
   className: string

@@ -1,10 +1,10 @@
 import { useState, useLayoutEffect } from "react"
-import Particle from "../core/Particle"
-import Animation from "../core/Animation"
+import Particle from "../../../physics/Particle"
+import Animation from "../../../physics/Animation"
 import { ErrorFlashHook } from "./error-flash.props"
-import { scaleLinear } from "../utils/scales"
-import { AnimationEventType } from "../core/props"
-import { isBrowser } from "../utils/misc"
+import { scaleLinear } from "../../../utils/scales"
+import { AnimationEventType } from "../../../physics/props"
+import { isBrowser } from "../../../utils/misc"
 
 const { AnimationComplete } = AnimationEventType
 

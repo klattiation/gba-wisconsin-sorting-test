@@ -1,4 +1,4 @@
-import Vector2 from "../core/Vector2"
+import Vector2 from "../../../physics/Vector2"
 
 interface UseConfettiProps {
   canvasRef: React.MutableRefObject<any>
