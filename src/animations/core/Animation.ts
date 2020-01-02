@@ -1,16 +1,26 @@
-import { PhysicsEntity } from "./types"
-import Vector2 from "../utils/Vector2"
+import { AnimationEventType, PhysicsEntity } from "./props"
+import Vector2 from "./Vector2"
 
 class Animation {
   entities: PhysicsEntity[] = []
-  gravity = Vector2.Zero()
+  forces: Vector2[] = []
 
+  private handlers = new Map<AnimationEventType, Set<() => void>>()
+  private age = 0
   private time = -1
   private isRunning = false
   private raf = -1
 
-  constructor(private ctx: CanvasRenderingContext2D) {
+  constructor(
+    private ctx: CanvasRenderingContext2D,
+    private duration: number = Infinity
+  ) {
     this.step = this.step.bind(this)
+  }
+
+  on(type: AnimationEventType, handler: () => void) {
+    const typeHandlers = this.handlers.get(type)
+    typeHandlers?.add(handler)
   }
 
   start() {
@@ -53,10 +63,16 @@ class Animation {
   }
 
   private update(dt: number) {
+    this.age += dt
     this.entities.forEach(entity => {
       entity.update(dt)
-      entity.applyForce(this.gravity)
+      this.forces.forEach(force => entity.applyForce(force))
     })
+    if (this.age >= this.duration) {
+      this.handlers
+        .get(AnimationEventType.AnimationComplete)
+        ?.forEach(handler => handler.call(this))
+    }
   }
 
   private render() {

@@ -18,6 +18,7 @@ interface TargetAvatarProps {
   data: ResolvedCriteriaAssignment
   imageUrl: string
   onCorrectDrop?: () => void
+  onWrongDrop?: () => void
 }
 
 const TargetAvatar: FC<TargetAvatarProps> = ({
@@ -25,6 +26,7 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
   data,
   imageUrl,
   onCorrectDrop = noop,
+  onWrongDrop = noop,
 }) => {
   const dispatch = useDispatch()
   const criteria = useSelector(getTrumpCriteria)
@@ -34,9 +36,7 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
     drop: (card: CardDragItem) => {
       dispatch(playCard(data, card.data, criteria))
       const isCorrect = card.data[criteria].id === data[criteria].id
-      if (isCorrect) {
-        onCorrectDrop()
-      }
+      isCorrect ? onCorrectDrop() : onWrongDrop()
     },
     collect: mon => ({
       isOver: !!mon.isOver(),

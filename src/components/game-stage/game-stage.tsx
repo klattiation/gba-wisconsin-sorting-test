@@ -1,11 +1,12 @@
-import React, { FC } from "react"
+import React, { FC, useRef } from "react"
 import cn from "classnames"
 import TargetAvatar from "../avatars/target"
 import styles from "./game-stage.module.css"
 import Blackboard from "../blackboard"
 import { AUDIENCE } from "../../state/game/game.state"
 import useConfetti from "../../animations/confetti"
-import Vector2 from "../../animations/utils/Vector2"
+import Vector2 from "../../animations/core/Vector2"
+import useErrorFlash from "../../animations/error-flash"
 
 interface GameStageProps {
   className: string
@@ -13,11 +14,16 @@ interface GameStageProps {
 const canvasSize = new Vector2(1200, 900)
 
 const GameStage: FC<GameStageProps> = ({ className }) => {
-  const { canvasRef, spawn } = useConfetti()
+  const canvasRef = useRef(null)
+  const { spawn } = useConfetti({ canvasRef })
+  const { play } = useErrorFlash({ canvasRef })
   const audience = useAudience()
 
   const handleCorrectDrop = () => {
     spawn(new Vector2(canvasSize.x * (1 / 3), 50))
+  }
+  const handleWrongDrop = () => {
+    play()
   }
 
   return (
@@ -30,6 +36,7 @@ const GameStage: FC<GameStageProps> = ({ className }) => {
             imageUrl={`images/avatar-${idx}.png`}
             data={entry}
             onCorrectDrop={handleCorrectDrop}
+            onWrongDrop={handleWrongDrop}
           />
         ))}
       </div>
