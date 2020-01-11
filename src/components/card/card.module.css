@@ -20,6 +20,11 @@
   word-wrap: break-word;
 }
 
+.image > img {
+  width: auto;
+  height: 100%;
+}
+
 .dragging {
   opacity: 0;
 }

@@ -14,19 +14,21 @@ import { getTrumpCriteria } from "../../../state/game/game.selectors"
 import { DEFAULT_CRITERIA_ORDER } from "../../../state/game/game.state"
 
 interface TargetAvatarProps {
-  idx: number
   data: ResolvedCriteriaAssignment
   imageUrl: string
+  imageUrlActive: string
   onCorrectDrop?: () => void
   onWrongDrop?: () => void
+  style?: any
 }
 
 const TargetAvatar: FC<TargetAvatarProps> = ({
-  idx,
   data,
   imageUrl,
+  imageUrlActive,
   onCorrectDrop = noop,
   onWrongDrop = noop,
+  style,
 }) => {
   const dispatch = useDispatch()
   const criteria = useSelector(getTrumpCriteria)
@@ -47,6 +49,7 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
     <div
       ref={ref}
       className={styles.component}
+      style={style}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -58,7 +61,7 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
         className={styles.list}
       />
       <img
-        src={imageUrl}
+        src={isOver ? imageUrlActive : imageUrl}
         alt={"Hier steht ein Avatar"}
         className={styles.avatar}
       />

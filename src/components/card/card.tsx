@@ -30,10 +30,14 @@ const Card: FC<CardProps> = ({ data, className }) => {
       className={cn(styles.component, isDragging && styles.dragging, className)}
       ref={ref}
     >
-      <div className={styles.image}>{data.image}</div>
+      <div className={styles.image}>
+        <img src={imgUrl(data.image)} alt="Produkt" />
+      </div>
       <CriteriaList data={data} order={order} filled noTopRadius />
     </div>
   )
 }
+
+const imgUrl = (filename: string) => `/images/products/${filename}`
 
 export default Card
