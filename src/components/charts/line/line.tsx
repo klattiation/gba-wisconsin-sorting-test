@@ -1,4 +1,5 @@
 import React, { FC, useRef, useEffect } from "react"
+import cn from "classnames"
 import get from "lodash/get"
 import { select } from "d3-selection"
 import { line } from "d3-shape"
@@ -9,9 +10,12 @@ import useResizeObserver from "../../../hooks/use-resize-observer"
 import { useSelector } from "react-redux"
 import { getScoreHistory } from "../../../state/game/game.selectors"
 
-const LineChart: FC = () => {
+interface LineChartProps {
+  className?: string
+}
+
+const LineChart: FC<LineChartProps> = ({ className }) => {
   const data = useSelector(getScoreHistory)
-  // const data = [10000, 9500, 9000, 9500, 10000, 10500, 11000, 10500]
   const wrapperRef = useRef(null)
   const svgRef = useRef(null)
 
@@ -55,7 +59,7 @@ const LineChart: FC = () => {
   }, [data, height, width])
 
   return (
-    <figure className={styles.component} ref={wrapperRef}>
+    <figure className={cn(styles.component, className)} ref={wrapperRef}>
       <svg className={styles.svg} ref={svgRef} />
     </figure>
   )
