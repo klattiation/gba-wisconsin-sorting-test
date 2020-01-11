@@ -4,11 +4,19 @@ import { ResolvedCard, CriteriaName } from "./game.props"
 import { CARDS, CRITERIA_TRUMP_ORDER, CRITERIA_CARD_ORDERS } from "./game.state"
 import last from "lodash/last"
 
-const getCardIndex = (state: GS) => state.game.cardIndex
+export const getCardIndex = (state: GS) => state.game.cardIndex
 
 const getCriteriaIndex = (state: GS) => state.game.criteriaTrumpIndex
 
 export const getScore = (state: GS) => last(state.game.scores) || 0
+
+export const getRoundScore = (state: GS) =>
+  last(state.game.scoresPerRound) || null
+
+// export const getPrevScore = (state: GS) => {
+//   const { scores } = state.game
+//   return (scores.length > 1) ? scores[scores.length - 2] : null
+// }
 
 export const getScoreHistory = (state: GS) => state.game.scores
 
@@ -35,3 +43,5 @@ export const getIsGameComplete = createSelector(
   getCardIndex,
   index => index >= CARDS.size
 )
+
+// export const getLastMoveSuccess = createSelector(getScore, score => score > 0)

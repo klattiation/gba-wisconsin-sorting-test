@@ -7,6 +7,7 @@ import useConfetti from "../../hooks/animations/use-confetti"
 import useErrorFlash from "../../hooks/animations/use-error-flash"
 import Vector2 from "../../physics/Vector2"
 import Stand from "../stand"
+import ScoreAnimation from "./score-animation"
 
 interface GameStageProps {
   className: string
@@ -43,6 +44,7 @@ const GameStage: FC<GameStageProps> = ({ className }) => {
         ))}
         <Stand />
       </div>
+      <ScoreAnimation />
       <canvas
         className={styles.animationCanvas}
         ref={canvasRef}

@@ -24,10 +24,6 @@ const playCard = (state: GameState, payload: PlayCardPayload): GameState => {
   const cardIndex = state.cardIndex + 1
   const newCombo = isCorrect ? state.combo + 1 : 0
   const lastScore = last(state.scores) || 0
-  const scores = [
-    ...state.scores,
-    isCorrect ? lastScore + SCORE_WIN : lastScore + SCORE_LOSE,
-  ]
   const isCriteriaChange = newCombo >= 7
   const criteriaIndex = isCriteriaChange
     ? state.criteriaTrumpIndex + 1
@@ -37,7 +33,14 @@ const playCard = (state: GameState, payload: PlayCardPayload): GameState => {
     cardIndex,
     combo: isCriteriaChange ? 0 : newCombo,
     criteriaTrumpIndex: criteriaIndex,
-    scores,
+    scores: [
+      ...state.scores,
+      isCorrect ? lastScore + SCORE_WIN : lastScore + SCORE_LOSE,
+    ],
+    scoresPerRound: [
+      ...state.scoresPerRound,
+      isCorrect ? SCORE_WIN : SCORE_LOSE,
+    ],
   }
 }
 

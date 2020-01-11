@@ -735,4 +735,5 @@ export const initialState: GameState = Object.freeze({
   criteriaTrumpIndex: 0,
   combo: 0,
   scores: [10000],
+  scoresPerRound: [],
 })
