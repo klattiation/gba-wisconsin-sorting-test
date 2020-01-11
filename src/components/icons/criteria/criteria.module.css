@@ -4,11 +4,11 @@
 }
 
 .light path {
-  fill: var(--colorWhite);
+  fill: transparent;
   stroke: var(--colorWhite);
 }
 
 .dark path {
-  fill: var(--colorPetrol);
+  fill: transparent;
   stroke: var(--colorPetrol);
 }

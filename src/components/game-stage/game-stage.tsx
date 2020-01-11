@@ -7,11 +7,6 @@ import useConfetti from "../../hooks/animations/use-confetti"
 import useErrorFlash from "../../hooks/animations/use-error-flash"
 import Vector2 from "../../physics/Vector2"
 import Stand from "../stand"
-import { useSelector } from "react-redux"
-import {
-  getCurrentCard,
-  getCriteriaOrder,
-} from "../../state/game/game.selectors"
 
 interface GameStageProps {
   className: string
@@ -24,8 +19,6 @@ const GameStage: FC<GameStageProps> = ({ className }) => {
   const { spawn } = useConfetti({ canvasRef })
   const { play } = useErrorFlash({ canvasRef })
   const audience = useAudience()
-  const card = useSelector(getCurrentCard)
-  const order = useSelector(getCriteriaOrder)
 
   const handleCorrectDrop = () => {
     spawn(new Vector2(CANVAS_WIDTH * (1 / 3), 50))
@@ -48,7 +41,7 @@ const GameStage: FC<GameStageProps> = ({ className }) => {
             onWrongDrop={handleWrongDrop}
           />
         ))}
-        {card && <Stand card={card} order={order} />}
+        <Stand />
       </div>
       <canvas
         className={styles.animationCanvas}

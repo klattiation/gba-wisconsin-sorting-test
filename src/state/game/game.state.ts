@@ -381,7 +381,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "extravagant",
     [Value]: "image",
-    image: "campingchair.png",
+    image: "camping-chair.png",
   },
   {
     [Channel]: "tele",
@@ -453,7 +453,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "classic",
     [Value]: "image",
-    image: "bag.jpg",
+    image: "bag-3.jpg",
   },
   {
     [Channel]: "tele",
@@ -477,7 +477,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "classic",
     [Value]: "health",
-    image: "nikoncam.png",
+    image: "niconcam.png",
   },
   {
     [Channel]: "social",
@@ -557,7 +557,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "modern",
     [Value]: "sustainability",
-    image: "srewdriver.jpg",
+    image: "screwdriver.jpg",
   },
   {
     [Channel]: "social",
@@ -581,7 +581,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "innovative",
     [Value]: "quality",
-    image: "tragetasche",
+    image: "",
   },
   {
     [Channel]: "tv",

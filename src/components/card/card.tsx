@@ -33,7 +33,9 @@ const Card: FC<CardProps> = ({ data, className }) => {
       <div className={styles.image}>
         <img src={imgUrl(data.image)} alt="Produkt" />
       </div>
-      <CriteriaList data={data} order={order} filled noTopRadius />
+      {data && order && (
+        <CriteriaList data={data} order={order} filled noTopRadius />
+      )}
     </div>
   )
 }

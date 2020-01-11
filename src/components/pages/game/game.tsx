@@ -12,6 +12,7 @@ import { Route } from "../../../constants/routes"
 const Game: FC<RouteComponentProps> = () => {
   const isGameComplete = useSelector(getIsGameComplete)
   useEffect(() => {
+    console.log("complete", isGameComplete)
     if (isGameComplete) {
       const t = setTimeout(() => navigate(Route.Result), 500)
       return () => clearTimeout(t)

@@ -22,10 +22,7 @@ export const getTrumpCriteria = createSelector(
 
 export const getCriteriaOrder = createSelector(getCardIndex, cardIndex => {
   const entry = CRITERIA_CARD_ORDERS.find(v => cardIndex < v.threshold)
-  if (!entry) {
-    throw Error(`Could not find criteria order for cardIndex: ${cardIndex}`)
-  }
-  return entry.order
+  return entry ? entry.order : null
 })
 
 export const getCurrentCard = createSelector<
