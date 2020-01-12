@@ -1,6 +1,13 @@
 {
   "name": "gba-wisonsin-card-sorting-test",
   "version": "0.1.0",
+  "author": "Sascha Klatt",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "private": true,
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -48,12 +55,6 @@
     "prettier": "^1.19.1",
     "react-scripts": "3.3.0",
     "typescript": "^3.7.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

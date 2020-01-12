@@ -6,20 +6,33 @@ import Hudbar from "../../hudbar"
 import styles from "./game.module.css"
 import GameStage from "../../game-stage"
 import { useSelector } from "react-redux"
-import { getIsGameComplete } from "../../../state/game/game.selectors"
+import {
+  getIsGameComplete,
+  getGameResults,
+} from "../../../state/game/game.selectors"
 import { Route } from "../../../constants/routes"
 import { AUDIENCE } from "../../../state/game/game.state"
+import { saveResult } from "../../../services/api"
 
 const Game: FC<RouteComponentProps> = () => {
   const audience = useAudience()
   const isGameComplete = useSelector(getIsGameComplete)
+  const gameResult = useSelector(getGameResults)
 
   useEffect(() => {
-    if (isGameComplete) {
-      const t = setTimeout(() => navigate(Route.Result), 500)
-      return () => clearTimeout(t)
+    const save = async () => {
+      const success = await saveResult(gameResult)
+      if (success) {
+        navigate(Route.Result)
+      } else {
+        // TODO: show error page or message
+      }
     }
-  }, [isGameComplete])
+
+    if (isGameComplete) {
+      save()
+    }
+  }, [gameResult, isGameComplete])
 
   return (
     <DndProvider backend={Html5Backend}>
