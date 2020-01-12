@@ -11,7 +11,6 @@ interface ScoreAnimationProps {
 
 const ScoreAnimation: FC<ScoreAnimationProps> = ({ round }) => {
   const [visible, setVisible] = useState(false)
-  // const round = useSelector(getCardIndex)
   const roundScore = useSelector(getRoundScore)
 
   const handleEntered = () => {

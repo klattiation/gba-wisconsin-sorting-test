@@ -1,24 +1,32 @@
-import React, { FC, useRef } from "react"
+import React, { FC, useRef, ReactNode } from "react"
 import cn from "classnames"
 import TargetAvatar from "../avatars/target"
 import styles from "./game-stage.module.css"
-import { AUDIENCE } from "../../state/game/game.state"
 import useConfetti from "../../hooks/animations/use-confetti"
 import useErrorFlash from "../../hooks/animations/use-error-flash"
 import Vector2 from "../../physics/Vector2"
 import Stand from "../stand"
+import { List } from "immutable"
+import { ResolvedCriteriaAssignment } from "../../state/game/game.props"
 
 interface GameStageProps {
+  audience?: List<ResolvedCriteriaAssignment>
   className: string
+  renderInstructor?: () => ReactNode
+  withStand?: boolean
 }
 const CANVAS_WIDTH = 1200
 const CANVAS_HEIGHT = 900
 
-const GameStage: FC<GameStageProps> = ({ className }) => {
+const GameStage: FC<GameStageProps> = ({
+  className,
+  audience,
+  renderInstructor,
+  withStand = false,
+}) => {
   const canvasRef = useRef(null)
   const { spawn } = useConfetti({ canvasRef })
   const { play } = useErrorFlash({ canvasRef })
-  const audience = useAudience()
 
   const handleCorrectDrop = () => {
     spawn(new Vector2(CANVAS_WIDTH * (1 / 3), 50))
@@ -30,18 +38,20 @@ const GameStage: FC<GameStageProps> = ({ className }) => {
   return (
     <div className={cn(styles.component, className)}>
       <div className={styles.targetAudience}>
-        {audience.map((entry, idx) => (
-          <TargetAvatar
-            key={idx}
-            style={{ left: `${idx * 13}vw` }}
-            imageUrl={avatarImgUrl(idx)}
-            imageUrlActive={avatarImgUrlActive(idx)}
-            data={entry}
-            onCorrectDrop={handleCorrectDrop}
-            onWrongDrop={handleWrongDrop}
-          />
-        ))}
-        <Stand />
+        {renderInstructor && renderInstructor()}
+        {audience &&
+          audience.map((entry, idx) => (
+            <TargetAvatar
+              key={idx}
+              style={{ left: `${idx * 13}vw` }}
+              imageUrl={avatarImgUrl(idx)}
+              imageUrlActive={avatarImgUrlActive(idx)}
+              data={entry}
+              onCorrectDrop={handleCorrectDrop}
+              onWrongDrop={handleWrongDrop}
+            />
+          ))}
+        {withStand && <Stand />}
       </div>
       <canvas
         className={styles.animationCanvas}
@@ -58,7 +68,5 @@ const avatarImgUrl = (idx: number) =>
 
 const avatarImgUrlActive = (idx: number) =>
   `images/avatars/avatar_0${idx}-pose_01.svg`
-
-const useAudience = () => AUDIENCE
 
 export default GameStage

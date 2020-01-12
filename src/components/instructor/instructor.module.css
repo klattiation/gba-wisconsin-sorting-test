@@ -1,2 +1,14 @@
-.component  {
+.component {
+  height: auto;
+  width: 20vw;
+}
+.component img {
+  width: 100%;
+  height: auto;
+}
+
+.speechbubble {
+  position: absolute;
+  top: -10vh;
+  width: 50vw;
 }

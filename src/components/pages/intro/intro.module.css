@@ -1,9 +1,22 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100vh;
+}
+
+.stage {
+  flex: 1 0 auto;
+}
+
+.hudbar {
+  flex: 0 1 auto;
+}
+
 .instructor {
   position: absolute;
   left: 10px;
-  top: 0;
-  height: 70vh;
-  width: auto;
+  bottom: 0;
 }
 
 .speechbubble {
