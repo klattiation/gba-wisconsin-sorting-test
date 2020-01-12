@@ -23,7 +23,6 @@ const CriteriaList: FC<CriteriaListProps> = ({
   data,
   filled,
   hidden,
-  noTopRadius,
   order,
   transparent,
   withTransition,
@@ -35,7 +34,6 @@ const CriteriaList: FC<CriteriaListProps> = ({
       hidden && styles.hidden,
       withTransition && styles.withTransition,
       transparent && styles.transparent,
-      noTopRadius && styles.noTopRadius,
       className
     )}
   >

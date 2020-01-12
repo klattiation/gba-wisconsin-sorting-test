@@ -42,7 +42,6 @@ const Stand: FC<StandProps> = () => {
         )}
       </div>
       <div className={styles.description}>
-        <h2>{"[Product name]"}</h2>
         {card && order && (
           <CriteriaList data={card} order={order} transparent />
         )}
