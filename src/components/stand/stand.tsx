@@ -34,7 +34,10 @@ const Stand: FC<StandProps> = () => {
             ref={dragRef}
             src={`/images/products/${card.image}`}
             alt="Product"
-            style={{ opacity: isDragging ? 0 : 1 }}
+            style={{
+              opacity: isDragging ? 0 : 1,
+              cursor: "grab",
+            }}
           />
         )}
       </div>

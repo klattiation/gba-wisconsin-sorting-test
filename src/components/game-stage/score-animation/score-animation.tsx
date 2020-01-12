@@ -32,7 +32,7 @@ const ScoreAnimation: FC<ScoreAnimationProps> = ({ round }) => {
     <div className={styles.component}>
       <CSSTransition
         in={visible}
-        timeout={500}
+        timeout={400}
         onEntered={handleEntered}
         classNames={styles}
       >
