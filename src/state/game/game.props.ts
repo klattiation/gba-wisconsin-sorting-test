@@ -39,12 +39,13 @@ export interface ResolvedCard extends ResolvedCriteriaAssignment {
 }
 
 export interface GameState {
-  cardIndex: number
-  criteriaTrumpIndex: number
-  criteriaOrderIndex: number
-  combo: number
-  scores: number[]
-  scoresPerRound: number[]
+  cardIndex: number // current round
+  criteriaChanges: number[] // rounds where a trump criteria change happend
+  criteriaOrderIndex: number // order in which categories are displayed
+  criteriaTrumpIndex: number // category that is trump currently
+  combo: number // the number of the last consecutive correct rounds
+  scores: number[] // total scores at each round
+  scoresPerRound: number[] // score per round at each round
 }
 
 export interface PlayCardPayload {

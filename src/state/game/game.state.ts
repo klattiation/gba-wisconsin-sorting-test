@@ -731,6 +731,7 @@ export const CARDS = resolveIds(CARD_CONFIGS) as List<ResolvedCard>
 
 export const initialState: GameState = Object.freeze({
   cardIndex: 0,
+  criteriaChanges: [],
   criteriaOrderIndex: 0,
   criteriaTrumpIndex: 0,
   combo: 0,

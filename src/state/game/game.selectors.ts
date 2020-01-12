@@ -13,6 +13,8 @@ export const getScore = (state: GS) => last(state.game.scores) || 0
 
 export const getInitialScore = (state: GS) => first(state.game.scores) || 0
 
+export const getCriteriaChanges = (state: GS) => state.game.criteriaChanges
+
 export const getRoundScore = (state: GS) =>
   last(state.game.scoresPerRound) || null
 
@@ -40,4 +42,13 @@ export const getCurrentCard = createSelector<
 export const getIsGameComplete = createSelector(
   getCardIndex,
   index => index >= CARDS.size
+)
+
+export const getGameResults = createSelector(
+  getScore,
+  getCriteriaChanges,
+  (score, criteriaChanges) => ({
+    score,
+    criteriaChanges,
+  })
 )
