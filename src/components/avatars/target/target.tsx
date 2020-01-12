@@ -12,31 +12,36 @@ import { useDispatch, useSelector } from "react-redux"
 import { playCard } from "../../../state/game/game.actions"
 import { getTrumpCriteria } from "../../../state/game/game.selectors"
 import { DEFAULT_CRITERIA_ORDER } from "../../../state/game/game.state"
+import ScoreAnimation from "../../game-stage/score-animation"
 
 interface TargetAvatarProps {
-  idx: number
   data: ResolvedCriteriaAssignment
   imageUrl: string
+  imageUrlActive: string
   onCorrectDrop?: () => void
   onWrongDrop?: () => void
+  style?: any
 }
 
 const TargetAvatar: FC<TargetAvatarProps> = ({
-  idx,
   data,
   imageUrl,
+  imageUrlActive,
   onCorrectDrop = noop,
   onWrongDrop = noop,
+  style,
 }) => {
   const dispatch = useDispatch()
   const criteria = useSelector(getTrumpCriteria)
   const [isHovering, setIsHovering] = useState(false)
+  const [dropCount, setDropCount] = useState(0)
   const [{ isOver }, ref] = useDrop({
     accept: DragItem.Card,
     drop: (card: CardDragItem) => {
       dispatch(playCard(data, card.data, criteria))
       const isCorrect = card.data[criteria].id === data[criteria].id
       isCorrect ? onCorrectDrop() : onWrongDrop()
+      setDropCount(count => count + 1)
     },
     collect: mon => ({
       isOver: !!mon.isOver(),
@@ -47,6 +52,7 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
     <div
       ref={ref}
       className={styles.component}
+      style={style}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -58,10 +64,11 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
         className={styles.list}
       />
       <img
-        src={imageUrl}
+        src={isOver ? imageUrlActive : imageUrl}
         alt={"Hier steht ein Avatar"}
         className={styles.avatar}
       />
+      <ScoreAnimation round={dropCount} />
     </div>
   )
 }

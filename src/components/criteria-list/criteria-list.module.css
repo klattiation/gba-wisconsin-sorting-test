@@ -1,5 +1,5 @@
 .component {
-  border: 1px solid var(--colorPetrol);
+  border: 2px solid var(--colorPetrol);
   border-radius: 24px;
   padding: 1rem;
   text-align: left;
@@ -12,11 +12,6 @@
 
 .withTransition {
   transition: all 0.1s ease-in-out;
-}
-
-.noTopRadius {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .filled {
@@ -43,4 +38,10 @@
 .hidden {
   opacity: 0;
   transform: translateY(10%);
+}
+
+.transparent {
+  background: transparent;
+  border: none;
+  color: var(--colorWhite);
 }

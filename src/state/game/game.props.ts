@@ -44,6 +44,7 @@ export interface GameState {
   criteriaOrderIndex: number
   combo: number
   scores: number[]
+  scoresPerRound: number[]
 }
 
 export interface PlayCardPayload {

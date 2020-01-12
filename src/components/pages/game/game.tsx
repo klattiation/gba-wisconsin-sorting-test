@@ -8,23 +8,29 @@ import GameStage from "../../game-stage"
 import { useSelector } from "react-redux"
 import { getIsGameComplete } from "../../../state/game/game.selectors"
 import { Route } from "../../../constants/routes"
+import { AUDIENCE } from "../../../state/game/game.state"
 
 const Game: FC<RouteComponentProps> = () => {
+  const audience = useAudience()
   const isGameComplete = useSelector(getIsGameComplete)
+
   useEffect(() => {
     if (isGameComplete) {
       const t = setTimeout(() => navigate(Route.Result), 500)
       return () => clearTimeout(t)
     }
   }, [isGameComplete])
+
   return (
     <DndProvider backend={Html5Backend}>
       <div className={styles.component}>
-        <GameStage className={styles.stage}>Stage</GameStage>
+        <GameStage className={styles.stage} audience={audience} withStand />
         <Hudbar className={styles.hudbar} />
       </div>
     </DndProvider>
   )
 }
+
+const useAudience = () => AUDIENCE
 
 export default Game

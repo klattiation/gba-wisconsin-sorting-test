@@ -1,14 +1,25 @@
-.instructor {
-  position: absolute;
-  left: 10px;
-  top: 0;
-  height: 70vh;
-  width: auto;
+.component {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100vh;
 }
 
-.speechbubble {
+.stage {
+  flex: 1 0 auto;
+}
+
+.hudbar {
+  flex: 0 1 auto;
+}
+
+.instructor {
+  width: 20vw;
+  height: auto;
+  margin-right: 3rem;
   position: absolute;
-  left: 400px;
-  top: 50px;
-  max-width: 600px;
+  bottom: 0;
+}
+.instructor svg {
+  transform: translateY(20%);
 }

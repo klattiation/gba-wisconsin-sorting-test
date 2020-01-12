@@ -1,13 +1,24 @@
 .component {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100vh;
+}
+
+.stage {
+  flex: 1 0 auto;
+}
+
+.hudbar {
+  flex: 0 1 auto;
 }
 
 .instructor {
-  width: 40%;
-  height: 100vh;
-  overflow: hidden;
+  width: 20vw;
+  height: auto;
   margin-right: 3rem;
+  position: absolute;
+  bottom: 0;
 }
 .instructor svg {
   transform: translateY(20%);

@@ -35,3 +35,27 @@
 .task > span:nth-child(2) {
   font-size: 36px;
 }
+
+.stats {
+  flex: 1 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.stats > * {
+  flex: 1 0 auto;
+}
+
+.chart {
+  height: calc(100% - 50px);
+}
+
+.score {
+  flex: 1 0 auto;
+  font-size: 36px;
+  height: 36px;
+  margin: 0;
+  text-align: right;
+}

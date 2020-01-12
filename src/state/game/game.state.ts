@@ -133,7 +133,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "classic",
     [Value]: "fairness",
-    image: "uhr",
+    image: "car.jpg",
   },
   {
     [Channel]: "print",
@@ -141,7 +141,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "modern",
     [Value]: "quality",
-    image: "benzinroller",
+    image: "benzinroller.png",
   },
   {
     [Channel]: "tele",
@@ -149,7 +149,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "innovative",
     [Value]: "health",
-    image: "skates",
+    image: "rollerblades-1.png",
   },
   {
     [Channel]: "tv",
@@ -157,7 +157,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "innovative",
     [Value]: "image",
-    image: "bike",
+    image: "bike.png",
   },
   {
     [Channel]: "outdoor",
@@ -165,7 +165,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "classic",
     [Value]: "image",
-    image: "tennisschlaeger",
+    image: "tennisschlaeger.png",
   },
   {
     [Channel]: "social",
@@ -173,7 +173,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "minimal",
     [Value]: "fairness",
-    image: "komode",
+    image: "bathrobe.jpg",
   },
   {
     [Channel]: "print",
@@ -181,7 +181,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "modern",
     [Value]: "sustainability",
-    image: "mikrowelle",
+    image: "microwave.png",
   },
   {
     [Channel]: "tele",
@@ -189,7 +189,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "modern",
     [Value]: "health",
-    image: "stuhl",
+    image: "chair.png",
   },
   {
     [Channel]: "tv",
@@ -197,7 +197,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "modern",
     [Value]: "fairness",
-    image: "staubsauger",
+    image: "staubsauger.png",
   },
   {
     [Channel]: "outdoor",
@@ -205,7 +205,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "minimal",
     [Value]: "image",
-    image: "rasenmaeher",
+    image: "rasenmaeher.png",
   },
   {
     [Channel]: "social",
@@ -213,7 +213,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "extravagant",
     [Value]: "fairness",
-    image: "thermobecher",
+    image: "monitor.png",
   },
   {
     [Channel]: "print",
@@ -221,7 +221,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "innovative",
     [Value]: "quality",
-    image: "couch",
+    image: "couch.png",
   },
   {
     [Channel]: "tele",
@@ -229,7 +229,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "innovative",
     [Value]: "image",
-    image: "topf",
+    image: "pot.png",
   },
   {
     [Channel]: "tv",
@@ -237,7 +237,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "minimal",
     [Value]: "sustainability",
-    image: "kopfhoerer_big",
+    image: "headphones.png",
   },
   {
     [Channel]: "outdoor",
@@ -245,7 +245,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "minimal",
     [Value]: "image",
-    image: "kaffeemaschine",
+    image: "kitchenmachine.png",
   },
   {
     [Channel]: "social",
@@ -253,7 +253,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "classic",
     [Value]: "quality",
-    image: "sitzball",
+    image: "chair-3.png",
   },
   {
     [Channel]: "print",
@@ -261,7 +261,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "modern",
     [Value]: "fairness",
-    image: "telefon",
+    image: "bike-2.png",
   },
   {
     [Channel]: "tele",
@@ -269,7 +269,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "modern",
     [Value]: "health",
-    image: "kicker",
+    image: "kicker.png",
   },
   {
     [Channel]: "tv",
@@ -277,7 +277,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "modern",
     [Value]: "sustainability",
-    image: "kopfhoerer",
+    image: "headphones-2.png",
   },
   {
     [Channel]: "outdoor",
@@ -285,7 +285,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "modern",
     [Value]: "quality",
-    image: "tischlampe",
+    image: "lamp.png",
   },
   {
     [Channel]: "social",
@@ -293,7 +293,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "innovative",
     [Value]: "health",
-    image: "hanteln",
+    image: "helmet.jpg",
   },
   {
     [Channel]: "print",
@@ -301,7 +301,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "extravagant",
     [Value]: "sustainability",
-    image: "kuechengeraet",
+    image: "tv.jpg",
   },
   {
     [Channel]: "tele",
@@ -309,7 +309,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "innovative",
     [Value]: "image",
-    image: "grill",
+    image: "grill.png",
   },
   {
     [Channel]: "tv",
@@ -317,7 +317,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "modern",
     [Value]: "health",
-    image: "zelt",
+    image: "tent.png",
   },
   {
     [Channel]: "social",
@@ -325,7 +325,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "classic",
     [Value]: "fairness",
-    image: "basketball",
+    image: "helmet-2.jpg",
   },
   {
     [Channel]: "print",
@@ -333,7 +333,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "innovative",
     [Value]: "image",
-    image: "kronleuchter",
+    image: "chandelier.png",
   },
   {
     [Channel]: "tele",
@@ -341,7 +341,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "extravagant",
     [Value]: "image",
-    image: "rollschuhe",
+    image: "rollerblades-2.png",
   },
   {
     [Channel]: "outdoor",
@@ -349,7 +349,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "modern",
     [Value]: "health",
-    image: "uhr2",
+    image: "watch.png",
   },
   {
     [Channel]: "outdoor",
@@ -357,7 +357,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "minimal",
     [Value]: "sustainability",
-    image: "yogamatte",
+    image: "coffeemaker.jpg",
   },
   {
     [Channel]: "social",
@@ -365,7 +365,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "extravagant",
     [Value]: "sustainability",
-    image: "wanderschuhe",
+    image: "boots.png",
   },
   {
     [Channel]: "print",
@@ -373,7 +373,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "modern",
     [Value]: "sustainability",
-    image: "roller",
+    image: "scooter.png",
   },
   {
     [Channel]: "tele",
@@ -381,7 +381,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "extravagant",
     [Value]: "image",
-    image: "campingstuhl",
+    image: "camping-chair.png",
   },
   {
     [Channel]: "tele",
@@ -389,7 +389,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "innovative",
     [Value]: "health",
-    image: "smartwatch",
+    image: "watch-2.png",
   },
   {
     [Channel]: "tv",
@@ -397,7 +397,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "minimal",
     [Value]: "image",
-    image: "staubsauger2",
+    image: "coffeemaker-2.jpg",
   },
   {
     [Channel]: "social",
@@ -405,7 +405,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "extravagant",
     [Value]: "health",
-    image: "actioncam",
+    image: "actioncam.png",
   },
   {
     [Channel]: "print",
@@ -413,7 +413,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "extravagant",
     [Value]: "image",
-    image: "toaster",
+    image: "toaster.png",
   },
   {
     [Channel]: "tele",
@@ -421,7 +421,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "minimal",
     [Value]: "quality",
-    image: "rucksack",
+    image: "bag.png",
   },
   {
     [Channel]: "tv",
@@ -429,7 +429,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "classic",
     [Value]: "image",
-    image: "rolle",
+    image: "coffeemaker-3.png",
   },
   {
     [Channel]: "outdoor",
@@ -437,7 +437,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "modern",
     [Value]: "health",
-    image: "waschmaschine",
+    image: "washingmachine.png",
   },
   {
     [Channel]: "social",
@@ -445,7 +445,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "classic",
     [Value]: "health",
-    image: "kaffeemaschine2",
+    image: "pan.png",
   },
   {
     [Channel]: "print",
@@ -453,7 +453,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "classic",
     [Value]: "image",
-    image: "handmixer",
+    image: "bag-3.jpg",
   },
   {
     [Channel]: "tele",
@@ -461,7 +461,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "minimal",
     [Value]: "image",
-    image: "photocamera",
+    image: "digicam.png",
   },
   {
     [Channel]: "tv",
@@ -469,7 +469,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "modern",
     [Value]: "health",
-    image: "laptop",
+    image: "laptop.png",
   },
   {
     [Channel]: "outdoor",
@@ -477,7 +477,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "classic",
     [Value]: "health",
-    image: "nikoncamera",
+    image: "niconcam.png",
   },
   {
     [Channel]: "social",
@@ -485,7 +485,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "extravagant",
     [Value]: "sustainability",
-    image: "balkonstuhl",
+    image: "deckchair.png",
   },
   {
     [Channel]: "print",
@@ -493,7 +493,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "discount",
     [Design]: "classic",
     [Value]: "quality",
-    image: "rollkoffer",
+    image: "suitcase.png",
   },
   {
     [Channel]: "tele",
@@ -501,7 +501,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "modern",
     [Value]: "quality",
-    image: "sportrucksack",
+    image: "bag-2.png",
   },
   {
     [Channel]: "tele",
@@ -509,7 +509,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "discount",
     [Design]: "minimal",
     [Value]: "sustainability",
-    image: "minigrill",
+    image: "grill-2.png",
   },
   {
     [Channel]: "outdoor",
@@ -517,7 +517,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "modern",
     [Value]: "fairness",
-    image: "waage",
+    image: "balance.png",
   },
   {
     [Channel]: "social",
@@ -525,7 +525,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "regular",
     [Design]: "minimal",
     [Value]: "sustainability",
-    image: "buegeleisen",
+    image: "iron.png",
   },
   {
     [Channel]: "print",
@@ -533,7 +533,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "innovative",
     [Value]: "sustainability",
-    image: "sessel",
+    image: "chair-2.png",
   },
   {
     [Channel]: "tele",
@@ -541,7 +541,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "discount",
     [Design]: "innovative",
     [Value]: "health",
-    image: "foehn",
+    image: "hairdryer.png",
   },
   {
     [Channel]: "tv",
@@ -549,7 +549,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "minimal",
     [Value]: "fairness",
-    image: "wasserkocher",
+    image: "kettle.png",
   },
   {
     [Channel]: "outdoor",
@@ -557,7 +557,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "modern",
     [Value]: "sustainability",
-    image: "komode2",
+    image: "screwdriver.jpg",
   },
   {
     [Channel]: "social",
@@ -565,7 +565,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "minimal",
     [Value]: "quality",
-    image: "schuhe",
+    image: "shoes.png",
   },
   {
     [Channel]: "print",
@@ -573,7 +573,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "classic",
     [Value]: "image",
-    image: "brieftasche",
+    image: "wallet.png",
   },
   {
     [Channel]: "tele",
@@ -581,7 +581,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "innovative",
     [Value]: "quality",
-    image: "tragetasche",
+    image: "",
   },
   {
     [Channel]: "tv",
@@ -589,7 +589,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "modern",
     [Value]: "fairness",
-    image: "uhr3",
+    image: "watch-3.png",
   },
   {
     [Channel]: "outdoor",
@@ -597,7 +597,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "modern",
     [Value]: "sustainability",
-    image: "regenschirm",
+    image: "umbrella.png",
   },
   {
     [Channel]: "social",
@@ -605,7 +605,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "advanced",
     [Design]: "minimal",
     [Value]: "sustainability",
-    image: "wecker",
+    image: "alarm.png",
   },
   {
     [Channel]: "print",
@@ -613,7 +613,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "discount",
     [Design]: "extravagant",
     [Value]: "fairness",
-    image: "bett",
+    image: "bed.png",
   },
   {
     [Channel]: "tele",
@@ -621,7 +621,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "modern",
     [Value]: "quality",
-    image: "kissen",
+    image: "shoes-2.jpg",
   },
   {
     [Channel]: "tv",
@@ -629,7 +629,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "installments",
     [Design]: "minimal",
     [Value]: "image",
-    image: "hammock",
+    image: "car-2.png",
   },
   {
     [Channel]: "outdoor",
@@ -637,7 +637,7 @@ const CARD_CONFIGS: CardConfig[] = [
     [Price]: "sale",
     [Design]: "classic",
     [Value]: "quality",
-    image: "belt",
+    image: "blender.png",
   },
 ]
 
@@ -735,4 +735,5 @@ export const initialState: GameState = Object.freeze({
   criteriaTrumpIndex: 0,
   combo: 0,
   scores: [10000],
+  scoresPerRound: [],
 })

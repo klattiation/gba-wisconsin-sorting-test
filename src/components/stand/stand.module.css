@@ -1,0 +1,61 @@
+.component {
+  margin: 0;
+  user-select: none;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  bottom: 2vh;
+
+  position: absolute;
+  right: 0;
+  width: 20vw;
+}
+
+.component > * {
+  flex: 1 0 auto;
+}
+
+.roof {
+  z-index: 1;
+}
+
+.product {
+  background: white;
+  border: 10px solid #372718;
+  border-top: none;
+  border-bottom: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 30px;
+  margin-top: -30px;
+  height: 23vh;
+}
+.product > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.description {
+  border: 10px solid #372718;
+  background: #4c3a2a;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.description h2 {
+  font-size: 20px;
+  color: var(--colorWhite);
+  text-align: left;
+}
+.description ul {
+  margin: 0;
+  padding: 0;
+}
+.description svg path {
+  fill: transparent;
+  stroke: var(--colorWhite);
+}

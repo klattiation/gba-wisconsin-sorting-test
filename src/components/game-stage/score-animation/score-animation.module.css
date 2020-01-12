@@ -1,0 +1,50 @@
+.component {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.inner {
+  opacity: 0;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: #0a0;
+}
+
+/* CSSTransition classes */
+
+.enter {
+  opacity: 1;
+  transform: scale(0.5);
+}
+
+.enterActive {
+  opacity: 1;
+  transition: all 400ms ease-in;
+  transform: scale(1) translateY(-50%);
+}
+
+.exit {
+  opacity: 1;
+  transform: scale(1) translateY(-50%);
+}
+
+.exitActive {
+  opacity: 0;
+  transition: all 400ms ease-out;
+  transform: scale(1.5) translateY(-100%);
+}
+
+.exitDone {
+  opacity: 0;
+  transform: scale(1.5) translateY(-100%);
+}

@@ -14,6 +14,7 @@ interface CriteriaListProps {
   hidden?: boolean
   noTopRadius?: boolean
   order: CriteriaName[]
+  transparent?: boolean
   withTransition?: boolean
 }
 
@@ -22,8 +23,8 @@ const CriteriaList: FC<CriteriaListProps> = ({
   data,
   filled,
   hidden,
-  noTopRadius,
   order,
+  transparent,
   withTransition,
 }) => (
   <ul
@@ -32,7 +33,7 @@ const CriteriaList: FC<CriteriaListProps> = ({
       filled ? styles.filled : styles.light,
       hidden && styles.hidden,
       withTransition && styles.withTransition,
-      noTopRadius && styles.noTopRadius,
+      transparent && styles.transparent,
       className
     )}
   >
