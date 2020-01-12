@@ -1,6 +1,4 @@
 import React, { FC } from "react"
-import { DndProvider } from "react-dnd"
-import Html5Backend from "react-dnd-html5-backend"
 import { RouteComponentProps } from "@reach/router"
 import styles from "./intro.module.css"
 import GameStage from "../../game-stage"
@@ -12,17 +10,15 @@ import { DialogActionName, Dialog } from "../../instructor/instructor"
 const IntroPage: FC<RouteComponentProps> = () => {
   const dialogs = useDialogs()
   return (
-    <DndProvider backend={Html5Backend}>
-      <div className={styles.component}>
-        <GameStage
-          className={styles.stage}
-          renderInstructor={() => (
-            <Instructor className={styles.instructor} dialogs={dialogs} />
-          )}
-        />
-        <Hudbar className={styles.hudbar} />
-      </div>
-    </DndProvider>
+    <div className={styles.component}>
+      <GameStage
+        className={styles.stage}
+        renderInstructor={() => (
+          <Instructor className={styles.instructor} dialogs={dialogs} />
+        )}
+      />
+      <Hudbar className={styles.hudbar} />
+    </div>
   )
 }
 

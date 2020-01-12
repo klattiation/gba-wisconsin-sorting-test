@@ -8,11 +8,13 @@ import Vector2 from "../../physics/Vector2"
 import Stand from "../stand"
 import { List } from "immutable"
 import { ResolvedCriteriaAssignment } from "../../state/game/game.props"
+import Blackboard from "../blackboard"
 
 interface GameStageProps {
   audience?: List<ResolvedCriteriaAssignment>
   className: string
   renderInstructor?: () => ReactNode
+  withBlackboard?: boolean
   withStand?: boolean
 }
 const CANVAS_WIDTH = 1200
@@ -22,6 +24,7 @@ const GameStage: FC<GameStageProps> = ({
   className,
   audience,
   renderInstructor,
+  withBlackboard = false,
   withStand = false,
 }) => {
   const canvasRef = useRef(null)
@@ -51,6 +54,7 @@ const GameStage: FC<GameStageProps> = ({
               onWrongDrop={handleWrongDrop}
             />
           ))}
+        {withBlackboard && <Blackboard className={styles.blackboard} />}
         {withStand && <Stand />}
       </div>
       <canvas

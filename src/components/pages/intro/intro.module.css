@@ -14,14 +14,12 @@
 }
 
 .instructor {
+  width: 20vw;
+  height: auto;
+  margin-right: 3rem;
   position: absolute;
-  left: 10px;
   bottom: 0;
 }
-
-.speechbubble {
-  position: absolute;
-  left: 400px;
-  top: 50px;
-  max-width: 600px;
+.instructor svg {
+  transform: translateY(20%);
 }
