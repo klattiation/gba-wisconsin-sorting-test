@@ -12,6 +12,7 @@ import {
 } from "../../../state/game/game.selectors"
 import { Route } from "../../../constants/routes"
 import { AUDIENCE } from "../../../state/game/game.state"
+import { saveResult } from "../../../services/api"
 
 const Game: FC<RouteComponentProps> = () => {
   const audience = useAudience()
@@ -19,10 +20,17 @@ const Game: FC<RouteComponentProps> = () => {
   const gameResult = useSelector(getGameResults)
 
   useEffect(() => {
+    const save = async () => {
+      const success = await saveResult(gameResult)
+      if (success) {
+        navigate(Route.Result)
+      } else {
+        // TODO: show error page or message
+      }
+    }
+
     if (isGameComplete) {
-      console.log("result", gameResult)
-      const t = setTimeout(() => navigate(Route.Result), 500)
-      return () => clearTimeout(t)
+      save()
     }
   }, [gameResult, isGameComplete])
 
