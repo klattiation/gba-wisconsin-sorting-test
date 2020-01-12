@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { playCard } from "../../../state/game/game.actions"
 import { getTrumpCriteria } from "../../../state/game/game.selectors"
 import { DEFAULT_CRITERIA_ORDER } from "../../../state/game/game.state"
+import ScoreAnimation from "../../game-stage/score-animation"
 
 interface TargetAvatarProps {
   data: ResolvedCriteriaAssignment
@@ -33,12 +34,14 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
   const dispatch = useDispatch()
   const criteria = useSelector(getTrumpCriteria)
   const [isHovering, setIsHovering] = useState(false)
+  const [dropCount, setDropCount] = useState(0)
   const [{ isOver }, ref] = useDrop({
     accept: DragItem.Card,
     drop: (card: CardDragItem) => {
       dispatch(playCard(data, card.data, criteria))
       const isCorrect = card.data[criteria].id === data[criteria].id
       isCorrect ? onCorrectDrop() : onWrongDrop()
+      setDropCount(count => count + 1)
     },
     collect: mon => ({
       isOver: !!mon.isOver(),
@@ -65,6 +68,7 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
         alt={"Hier steht ein Avatar"}
         className={styles.avatar}
       />
+      <ScoreAnimation round={dropCount} />
     </div>
   )
 }

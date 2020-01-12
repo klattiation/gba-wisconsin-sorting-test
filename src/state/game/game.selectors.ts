@@ -13,11 +13,6 @@ export const getScore = (state: GS) => last(state.game.scores) || 0
 export const getRoundScore = (state: GS) =>
   last(state.game.scoresPerRound) || null
 
-// export const getPrevScore = (state: GS) => {
-//   const { scores } = state.game
-//   return (scores.length > 1) ? scores[scores.length - 2] : null
-// }
-
 export const getScoreHistory = (state: GS) => state.game.scores
 
 export const getTrumpCriteria = createSelector(
@@ -43,5 +38,3 @@ export const getIsGameComplete = createSelector(
   getCardIndex,
   index => index >= CARDS.size
 )
-
-// export const getLastMoveSuccess = createSelector(getScore, score => score > 0)

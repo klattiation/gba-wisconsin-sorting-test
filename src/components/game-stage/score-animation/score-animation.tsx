@@ -1,14 +1,17 @@
 import React, { FC, useState, useEffect } from "react"
 import { CSSTransition } from "react-transition-group"
+import cn from "classnames"
 import styles from "./score-animation.module.css"
 import { useSelector } from "react-redux"
-import { getCardIndex, getRoundScore } from "../../../state/game/game.selectors"
+import { getRoundScore } from "../../../state/game/game.selectors"
 
-interface ScoreAnimationProps {}
+interface ScoreAnimationProps {
+  round: number
+}
 
-const ScoreAnimation: FC<ScoreAnimationProps> = () => {
+const ScoreAnimation: FC<ScoreAnimationProps> = ({ round }) => {
   const [visible, setVisible] = useState(false)
-  const round = useSelector(getCardIndex)
+  // const round = useSelector(getCardIndex)
   const roundScore = useSelector(getRoundScore)
 
   const handleEntered = () => {
@@ -23,21 +26,25 @@ const ScoreAnimation: FC<ScoreAnimationProps> = () => {
 
   const isPositive = roundScore && roundScore > 0
   const sign = isPositive ? "+" : ""
+  const value = roundScore ? `${sign}${roundScore}` : ""
 
   return (
     <div className={styles.component}>
-      {roundScore && (
-        <CSSTransition
-          in={visible}
-          timeout={500}
-          onEntered={handleEntered}
-          classNames={styles}
+      <CSSTransition
+        in={visible}
+        timeout={500}
+        onEntered={handleEntered}
+        classNames={styles}
+      >
+        <div
+          className={cn(
+            styles.inner,
+            isPositive ? styles.positive : styles.negative
+          )}
         >
-          <div
-            className={isPositive ? styles.positive : styles.negative}
-          >{`${sign}${roundScore}`}</div>
-        </CSSTransition>
-      )}
+          {value}
+        </div>
+      </CSSTransition>
     </div>
   )
 }

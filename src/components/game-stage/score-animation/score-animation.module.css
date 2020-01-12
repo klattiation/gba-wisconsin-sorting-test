@@ -8,12 +8,16 @@
   text-align: center;
 }
 
+.inner {
+  opacity: 0;
+}
+
 .negative {
   color: red;
 }
 
 .positive {
-  color: green;
+  color: #0a0;
 }
 
 /* CSSTransition classes */
@@ -26,21 +30,21 @@
 .enterActive {
   opacity: 1;
   transition: all 500ms ease-in;
-  transform: scale(1) translateY(-100%);
+  transform: scale(1) translateY(-50%);
 }
 
 .exit {
   opacity: 1;
-  transform: scale(1) translateY(-100%);
+  transform: scale(1) translateY(-50%);
 }
 
 .exitActive {
   opacity: 0;
   transition: all 500ms ease-out;
-  transform: scale(1.5) translateY(-200%);
+  transform: scale(1.5) translateY(-100%);
 }
 
 .exitDone {
   opacity: 0;
-  transform: scale(1.5) translateY(-200%);
+  transform: scale(1.5) translateY(-100%);
 }
