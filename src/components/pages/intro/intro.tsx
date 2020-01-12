@@ -2,7 +2,6 @@ import React, { FC } from "react"
 import { RouteComponentProps } from "@reach/router"
 import styles from "./intro.module.css"
 import GameStage from "../../game-stage"
-import Hudbar from "../../hudbar"
 import { Route } from "../../../constants/routes"
 import Instructor from "../../instructor"
 import { DialogActionName, Dialog } from "../../instructor/instructor"
@@ -17,7 +16,6 @@ const IntroPage: FC<RouteComponentProps> = () => {
           <Instructor className={styles.instructor} dialogs={dialogs} />
         )}
       />
-      <Hudbar className={styles.hudbar} />
     </div>
   )
 }
