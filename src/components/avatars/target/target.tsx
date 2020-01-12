@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react"
 import { useDrop } from "react-dnd"
 import noop from "lodash/noop"
+import cn from "classnames"
 import styles from "./target.module.css"
 import CriteriaList from "../../criteria-list"
 import {
@@ -48,6 +49,8 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
     }),
   })
 
+  const isTooltipHidden = !isOver && !isHovering
+
   return (
     <div
       ref={ref}
@@ -56,13 +59,16 @@ const TargetAvatar: FC<TargetAvatarProps> = ({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <CriteriaList
-        data={data}
-        hidden={!isOver && !isHovering}
-        order={DEFAULT_CRITERIA_ORDER}
-        withTransition
-        className={styles.list}
-      />
+      <div
+        className={cn(styles.tooltip, isTooltipHidden && styles.tooltipHidden)}
+      >
+        <CriteriaList
+          data={data}
+          order={DEFAULT_CRITERIA_ORDER}
+          withTransition
+          className={styles.list}
+        />
+      </div>
       <img
         src={isOver ? imageUrlActive : imageUrl}
         alt={"Hier steht ein Avatar"}
