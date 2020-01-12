@@ -727,7 +727,9 @@ const resolveIds = (cards: CriteriaAssignment[]) => {
 
 export const AUDIENCE = resolveIds(AUDIENCE_CONFIGS)
 
-export const CARDS = resolveIds(CARD_CONFIGS) as List<ResolvedCard>
+export const CARDS = (resolveIds(CARD_CONFIGS) as List<ResolvedCard>).filter(
+  (v, i) => i < 10
+)
 
 export const initialState: GameState = Object.freeze({
   cardIndex: 0,
