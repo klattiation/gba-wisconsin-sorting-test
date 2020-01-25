@@ -1,14 +1,10 @@
-import {
-  ResolvedCriteriaAssignment,
-  CriteriaName,
-  PlayCardActionCreator,
-} from "./game.props"
+import { ResolvedCriteriaAssignment, CriteriaName } from "./game.props"
 
 const BASE = "GAME"
 export const PLAY_CARD = `${BASE}.PLAY_CARD`
 export const RESET = `${BASE}.RESET`
 
-export const playCard: PlayCardActionCreator = (
+export const playCard = (
   avatarData: ResolvedCriteriaAssignment,
   cardData: ResolvedCriteriaAssignment,
   criteria: CriteriaName

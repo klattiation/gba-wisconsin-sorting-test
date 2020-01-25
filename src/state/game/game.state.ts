@@ -1,13 +1,12 @@
-import { List } from "immutable"
 import {
   CriteriaValue,
   CriteriaName,
   CardConfig,
-  ResolvedCriteriaAssignment,
   CriteriaAssignment,
   GameState,
   ResolvedCard,
 } from "./game.props"
+import { INITIAL_SCORE } from "../../constants"
 
 const { Channel, Category, Price, Design, Value } = CriteriaName
 
@@ -679,7 +678,7 @@ const AUDIENCE_CONFIGS: CriteriaAssignment[] = [
   },
 ]
 
-export const CRITERIA_TRUMP_ORDER = List([
+export const CRITERIA_TRUMP_ORDER = [
   Category,
   Value,
   Price,
@@ -687,17 +686,17 @@ export const CRITERIA_TRUMP_ORDER = List([
   Design,
   Value,
   Price,
-])
+]
 
 export const DEFAULT_CRITERIA_ORDER = [Channel, Category, Price, Design, Value]
 
-export const CRITERIA_CARD_ORDERS = List([
+export const CRITERIA_CARD_ORDERS = [
   { threshold: 24, order: DEFAULT_CRITERIA_ORDER },
   { threshold: 34, order: [Price, Value, Design, Channel, Category] },
   { threshold: 44, order: [Design, Channel, Value, Category, Price] },
   { threshold: 54, order: [Value, Price, Category, Channel, Design] },
   { threshold: 64, order: [Category, Design, Channel, Value, Price] },
-])
+]
 
 const makeResolver = (haystack: Record<string, any>) => (id: string) => {
   const cat = haystack[id]
@@ -713,28 +712,27 @@ const resolveIds = (cards: CriteriaAssignment[]) => {
   const design = makeResolver(DESIGNS)
   const price = makeResolver(PRICES)
   const value = makeResolver(VALUES)
-  return List<ResolvedCriteriaAssignment>(
-    cards.map(card => ({
-      ...card,
-      category: category(card.category),
-      channel: channel(card.channel),
-      design: design(card.design),
-      price: price(card.price),
-      value: value(card.value),
-    }))
-  )
+  return cards.map(card => ({
+    ...card,
+    category: category(card.category),
+    channel: channel(card.channel),
+    design: design(card.design),
+    price: price(card.price),
+    value: value(card.value),
+  }))
 }
 
 export const AUDIENCE = resolveIds(AUDIENCE_CONFIGS)
 
-export const CARDS = resolveIds(CARD_CONFIGS) as List<ResolvedCard>
+const cards = resolveIds(CARD_CONFIGS) as ResolvedCard[]
+export const CARDS = cards //.filter((v, i) => i < 3)
 
-export const initialState: GameState = Object.freeze({
+export const getInitialState = (): GameState => ({
   cardIndex: 0,
   criteriaChanges: [],
   criteriaOrderIndex: 0,
   criteriaTrumpIndex: 0,
   combo: 0,
-  scores: [10000],
+  scores: [INITIAL_SCORE],
   scoresPerRound: [],
 })

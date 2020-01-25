@@ -1,0 +1,220 @@
+{
+	"textures": [
+		{
+			"image": "level.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1705,
+				"h": 1093
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bush-back.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1592,
+						"h": 342
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1592,
+						"h": 342
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 1592,
+						"h": 342
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "bush-front.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1222,
+						"h": 251
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1222,
+						"h": 251
+					},
+					"frame": {
+						"x": 1,
+						"y": 345,
+						"w": 1222,
+						"h": 251
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "blackboard.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 477,
+						"h": 494
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 477,
+						"h": 494
+					},
+					"frame": {
+						"x": 1,
+						"y": 598,
+						"w": 477,
+						"h": 494
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "stand.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 466,
+						"h": 654
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 466,
+						"h": 654
+					},
+					"frame": {
+						"x": 1225,
+						"y": 345,
+						"w": 466,
+						"h": 654
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "sky.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 900
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 900
+					},
+					"frame": {
+						"x": 1693,
+						"y": 1,
+						"w": 11,
+						"h": 900
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "skyscraper-front.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 126,
+						"h": 389
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 126,
+						"h": 389
+					},
+					"frame": {
+						"x": 480,
+						"y": 598,
+						"w": 126,
+						"h": 389
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "skyscraper-back.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 122,
+						"h": 384
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 122,
+						"h": 384
+					},
+					"frame": {
+						"x": 608,
+						"y": 598,
+						"w": 122,
+						"h": 384
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "floor.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 10,
+						"h": 138
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 10,
+						"h": 138
+					},
+					"frame": {
+						"x": 1595,
+						"y": 1,
+						"w": 10,
+						"h": 138
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:18bde65a8bf397a31fabf48581586e86:3e9ee136941c357cda58c3cd534fdef0:131701cb6c4e8d84a5be75f0cc65185d$"
+	}
+}

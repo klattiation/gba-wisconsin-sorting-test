@@ -1,8 +1,0 @@
-@value bpTablet: 600px;
-@value bpDesktop: 960px;
-@value bpFullhd: 1640px;
-
-@value queryMobile: (max-width: 599px);
-@value queryTablet: (min-width: bpTablet) and (max-width: 959px);
-@value queryDesktop: (min-width: bpDesktop) and (max-width: 1639px);
-@value queryFullhd: (min-width: bpFullhd);

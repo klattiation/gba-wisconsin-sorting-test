@@ -1,4 +1,3 @@
-import { DragObjectWithType } from "react-dnd"
 import { ActionCreator, AnyAction } from "redux"
 
 export enum CriteriaName {
@@ -58,6 +57,6 @@ export type PlayCardActionCreator = ActionCreator<
   AnyAction & { payload: PlayCardPayload }
 >
 
-export interface CardDragItem extends DragObjectWithType {
+export interface CardDragItem {
   data: ResolvedCard
 }
