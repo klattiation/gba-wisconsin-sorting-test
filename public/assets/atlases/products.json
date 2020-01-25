@@ -1,0 +1,1343 @@
+{
+	"textures": [
+		{
+			"image": "products-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1023,
+				"h": 1493
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "actioncam.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "alarm.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 1,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bag-3.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 1,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bag.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 1,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "balance.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 1,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bathrobe.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 1,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bag-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 22,
+						"y": 0,
+						"w": 107,
+						"h": 150
+					},
+					"frame": {
+						"x": 913,
+						"y": 1,
+						"w": 107,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bed.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 153,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bike-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 153,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "bike.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 153,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "blender.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 153,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "camping-chair.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 153,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "car.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 153,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "coffeemaker-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 22,
+						"y": 0,
+						"w": 104,
+						"h": 150
+					},
+					"frame": {
+						"x": 913,
+						"y": 153,
+						"w": 104,
+						"h": 150
+					}
+				},
+				{
+					"filename": "chair-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 305,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "chair.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 305,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "chandelier.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 305,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "coffeemaker-2.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 305,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "coffeemaker.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 305,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "couch.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 305,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "suitcase.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 29,
+						"y": 0,
+						"w": 98,
+						"h": 150
+					},
+					"frame": {
+						"x": 913,
+						"y": 305,
+						"w": 98,
+						"h": 150
+					}
+				},
+				{
+					"filename": "deckchair.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 457,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "grill-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 457,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "grill.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 457,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "headphones.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 457,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "helmet-2.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 457,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "helmet.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 457,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "kettle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 609,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "kicker.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 761,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "kitchenmachine.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 913,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "lamp.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 1065,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "laptop.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 1,
+						"y": 1217,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "microwave.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 14,
+						"w": 150,
+						"h": 121
+					},
+					"frame": {
+						"x": 1,
+						"y": 1369,
+						"w": 150,
+						"h": 121
+					}
+				},
+				{
+					"filename": "niconcam.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 609,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "pan.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 609,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "pot.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 609,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "rasenmaeher.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 609,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "rollerblades-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 609,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "scooter.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 761,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "screwdriver.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 913,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "shoes-2.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 1065,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "shoes.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 153,
+						"y": 1217,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "car-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 24,
+						"w": 150,
+						"h": 100
+					},
+					"frame": {
+						"x": 153,
+						"y": 1369,
+						"w": 150,
+						"h": 100
+					}
+				},
+				{
+					"filename": "staubsauger.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 761,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "tent.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 761,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "toaster.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 761,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "tv.jpg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 761,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "umbrella.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 913,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "wallet.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 1065,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "washingmachine.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 305,
+						"y": 1217,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "digicam.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 26,
+						"w": 150,
+						"h": 92
+					},
+					"frame": {
+						"x": 305,
+						"y": 1369,
+						"w": 150,
+						"h": 92
+					}
+				},
+				{
+					"filename": "watch-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 913,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "watch.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 150
+					},
+					"frame": {
+						"x": 609,
+						"y": 913,
+						"w": 150,
+						"h": 150
+					}
+				},
+				{
+					"filename": "monitor.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 150,
+						"h": 145
+					},
+					"frame": {
+						"x": 761,
+						"y": 913,
+						"w": 150,
+						"h": 145
+					}
+				},
+				{
+					"filename": "hairdryer.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 145,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 1060,
+						"w": 145,
+						"h": 150
+					}
+				},
+				{
+					"filename": "watch-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 0,
+						"w": 114,
+						"h": 150
+					},
+					"frame": {
+						"x": 908,
+						"y": 1060,
+						"w": 114,
+						"h": 150
+					}
+				},
+				{
+					"filename": "iron.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 150,
+						"h": 144
+					},
+					"frame": {
+						"x": 457,
+						"y": 1065,
+						"w": 150,
+						"h": 144
+					}
+				},
+				{
+					"filename": "boots.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 150,
+						"h": 143
+					},
+					"frame": {
+						"x": 609,
+						"y": 1065,
+						"w": 150,
+						"h": 143
+					}
+				},
+				{
+					"filename": "headphones-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 150,
+						"h": 142
+					},
+					"frame": {
+						"x": 609,
+						"y": 1210,
+						"w": 150,
+						"h": 142
+					}
+				},
+				{
+					"filename": "benzinroller.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 0,
+						"w": 141,
+						"h": 150
+					},
+					"frame": {
+						"x": 457,
+						"y": 1211,
+						"w": 141,
+						"h": 150
+					}
+				},
+				{
+					"filename": "chair-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 6,
+						"w": 150,
+						"h": 138
+					},
+					"frame": {
+						"x": 600,
+						"y": 1354,
+						"w": 150,
+						"h": 138
+					}
+				},
+				{
+					"filename": "rollerblades-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 0,
+						"w": 127,
+						"h": 150
+					},
+					"frame": {
+						"x": 761,
+						"y": 1212,
+						"w": 127,
+						"h": 150
+					}
+				},
+				{
+					"filename": "tennisschlaeger.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 15,
+						"y": 0,
+						"w": 120,
+						"h": 150
+					},
+					"frame": {
+						"x": 890,
+						"y": 1212,
+						"w": 120,
+						"h": 150
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:43ef77da4be2f9cfe6a38dbae7139226:e39f3e61f3d93713eedb057fc2a54193:0131b392df5f993305c118f82186d834$"
+	}
+}
