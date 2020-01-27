@@ -1,4 +1,4 @@
-import Phaser, { Cameras, GameObjects, Scene, Tweens } from "phaser"
+import Phaser, { GameObjects, Scene, Tweens } from "phaser"
 import {
   ATLAS,
   ASSET_PATH,
@@ -13,7 +13,6 @@ import Avatar from "../game-objects/avatars/avatar"
 import Product from "../game-objects/product"
 import { playCard } from "../state/game/game.actions"
 import { AUDIENCE } from "../state/game/game.state"
-import { Game } from ".."
 import { AnyAction } from "redux"
 import Stand from "../game-objects/stand"
 import {
@@ -36,7 +35,7 @@ import { GameEvent } from "../state/game-manager"
 import { GlobalState } from "../state/create-store"
 import Blackboard from "../game-objects/blackboard"
 import { getGameManager } from "../utils"
-import { saveResult } from "../services/api-srv"
+import { saveResult, wakeUpApi } from "../services/api-srv"
 
 export enum SectionName {
   INTRO = "intro",
@@ -64,6 +63,7 @@ class MainScene extends Scene {
   }
 
   preload() {
+    wakeUpApi()
     this.loadAtlas(ATLAS.AVATARS)
     this.loadAtlas(ATLAS.LEVEL)
     this.loadAtlas(ATLAS.PRODUCTS)
