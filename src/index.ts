@@ -20,7 +20,11 @@ export class Game extends Phaser.Game {
 
 new Game({
   type: Phaser.AUTO,
-  parent: "phaser-example",
+  parent: "root",
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
   width: GAME_WIDTH,
   height: GAME_HEIGHT,
   scene: [MainScene, HUDScene],
