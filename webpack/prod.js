@@ -26,6 +26,7 @@ module.exports = merge(base, {
     }),
     new CopyPlugin([
       { from: `${publicPath}/assets`, to: `${buildPath}/assets` },
+      { from: `${publicPath}/survey.html`, to: `${buildPath}/survey.html` },
     ]),
     //new BundleAnalyzerPlugin(),
   ],

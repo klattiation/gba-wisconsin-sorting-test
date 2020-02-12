@@ -35,7 +35,7 @@ import { GameEvent } from "../state/game-manager"
 import { GlobalState } from "../state/create-store"
 import Blackboard from "../game-objects/blackboard"
 import { getGameManager } from "../utils"
-import { saveResult, wakeUpApi } from "../services/api-srv"
+import { saveResultToInput } from "../services/api-srv"
 
 export enum SectionName {
   INTRO = "intro",
@@ -63,7 +63,6 @@ class MainScene extends Scene {
   }
 
   preload() {
-    wakeUpApi()
     this.loadAtlas(ATLAS.AVATARS)
     this.loadAtlas(ATLAS.LEVEL)
     this.loadAtlas(ATLAS.PRODUCTS)
@@ -243,7 +242,7 @@ class MainScene extends Scene {
       this.instructor?.gotoPointingPose()
 
       const result = getGameResults(state)
-      await saveResult(result)
+      await saveResultToInput(result)
 
       await this.tweenCamera(SectionName.RESULT)
 
