@@ -31,7 +31,7 @@ export enum EVENTS {
 }
 
 export const ASSET_PATH =
-  "http://gba-marketing-manager.netlify.com/assets/atlases"
+  "https://gba-marketing-manager.netlify.com/assets/atlases"
 
 export const INITIAL_SCORE = 10000
 export const GAME_WIDTH = 1600
